@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-// import Img from "gatsby-image"
 
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -20,13 +19,6 @@ const ProjectsPage = () => {
           tags {
             label
           }
-          thumbnail {
-            childImageSharp {
-              fluid(maxWidth: 500, maxHeight: 500) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       }
     }
@@ -43,10 +35,6 @@ const ProjectsPage = () => {
       <div className="posts reading-view">
         {projects.allStrapiProject.nodes.map(project => (
           <>
-            {/* <Img
-              className="project-thumbnail"
-              fluid={project.thumbnail.childImageSharp.fluid}
-            /> */}
             <Link className="project" to={project.slug} key={project.id}>
               <div>
                 <h2 className="project-title">{project.title}</h2>
