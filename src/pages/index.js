@@ -5,6 +5,8 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 
+import "../components/layout.css"
+
 const IndexPage = ({ data }) => {
   return (
     <>
