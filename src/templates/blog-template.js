@@ -16,7 +16,13 @@ const BlogTemplate = ({
       <h5 className="highlight">{`${authored_date} • ${time_to_read} minute read`}</h5>
       <hr />
       <div className="blog-content">
-        <ReactMarkdown source={content} renderers={{ code: CodeBlock }} />
+        <ReactMarkdown
+          source={content}
+          renderers={{ code: CodeBlock }}
+          transformImageUri={uri =>
+            uri.startsWith("http") ? uri : `${process.env.IMAGE_BASE_URL}${uri}`
+          }
+        />
       </div>
       <hr />
       <PostNavigation next={next} prev={prev} postType="blog" />
