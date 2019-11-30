@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import slugify from "slugify"
 
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -13,6 +12,7 @@ const BlogPage = () => {
           id
           title
           blurb
+          slug
           authored_date(formatString: "MMMM DD, YYYY")
           time_to_read
         }
@@ -30,14 +30,7 @@ const BlogPage = () => {
       <hr />
       <div className="posts reading-view">
         {blogs.allStrapiBlog.nodes.map(blog => (
-          <Link
-            to={`/blog/${slugify(blog.title, {
-              remove: /\//,
-              lower: true,
-            })}`}
-            className="blog"
-            key={blog.id}
-          >
+          <Link to={blog.slug} className="blog" key={blog.id}>
             <h2 className="blog-title">{blog.title}</h2>
             <h5 className="blog-subtitle">
               {blog.authored_date} • {blog.time_to_read} minute read

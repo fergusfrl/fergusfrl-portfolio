@@ -9,7 +9,10 @@ const PostNavigation = ({ postType, next, prev }) => {
         {prev && (
           <Link
             className="nav-link"
-            to={`/${postType}/${slugify(prev, { lower: true, remove: /\// })}`}
+            to={`/${postType}/${slugify(prev, {
+              lower: true,
+              remove: /[/()]/gi,
+            })}`}
           >
             ← {prev}
           </Link>
@@ -18,7 +21,10 @@ const PostNavigation = ({ postType, next, prev }) => {
         {next && (
           <Link
             className="nav-link next"
-            to={`/${postType}/${slugify(next, { lower: true, remove: /\// })}`}
+            to={`/${postType}/${slugify(next, {
+              lower: true,
+              remove: /[/()]/gi,
+            })}`}
           >
             {next} →
           </Link>
