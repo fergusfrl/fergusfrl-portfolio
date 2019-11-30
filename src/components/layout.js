@@ -6,10 +6,16 @@ import Header from "./header"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
-  const [darkMode, setDarkMode] = React.useState(
+  const [darkMode, setDarkMode] = React.useState(false)
+
+  const checkDarkMode =
+    typeof window !== "undefined" &&
     window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-  )
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+
+  React.useEffect(() => {
+    setDarkMode(checkDarkMode)
+  }, [checkDarkMode])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
