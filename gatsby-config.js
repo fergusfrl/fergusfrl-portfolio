@@ -44,5 +44,11 @@ module.exports = {
         contentTypes: [`blog`, `project`],
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/blog`, `/projects`, `/blog/*`, `/projects/*`],
+      },
+    },
   ],
 }
