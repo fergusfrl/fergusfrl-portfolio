@@ -27,14 +27,14 @@ const IndexPage = ({ data }) => {
         <br />
         Currently, I am working at{" "}
         <a
-          href="https://orionhealth.com/nz/"
+          href="https://comrad.co.nz/"
           target="_blank"
           rel="noopener noreferrer"
           className="highlight"
         >
-          Orion Health
+          Comrad Medical Systems
         </a>{" "}
-        to revolutionize global health care. In the weekends I'm a whitewater
+        to optimise patient flow for efficiency and effectiveness. In the weekends I'm a whitewater
         kayaker, skier and outdoor adventurer.
       </p>
       <p className="reading-view">
