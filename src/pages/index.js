@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
     <>
       <SEO title="Home" />
       <Hero
-        text="Kia ora, ko Fergus Farrell toku ingoa. He Kaihanga Rorohiko ahau. No Otautahi ahau."
+        text="Hello, I’m Fergus Farrell. I’m a Software Developer living in Christchurch, NZ."
         highlights={["Fergus Farrell"]}
       />
       <div className="image-container">
