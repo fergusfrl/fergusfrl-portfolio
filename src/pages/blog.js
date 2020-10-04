@@ -15,6 +15,9 @@ const BlogPage = () => {
           slug
           authored_date(formatString: "MMMM DD, YYYY")
           time_to_read
+          tags {
+            label
+          }
         }
       }
     }
@@ -36,6 +39,11 @@ const BlogPage = () => {
               {blog.authored_date} • {blog.time_to_read} minute read
             </h5>
             <h4 className="blurb">{blog.blurb}</h4>
+            <div className="tags">
+              {blog.tags.map(tag => (
+                <p className="tag">{tag.label}</p>
+              ))}
+            </div>
           </Link>
         ))}
       </div>
