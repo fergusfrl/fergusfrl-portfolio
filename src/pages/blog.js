@@ -13,6 +13,7 @@ const BlogPage = () => {
           title
           blurb
           slug
+          draft
           authored_date(formatString: "MMMM DD, YYYY")
           time_to_read
           tags {
@@ -32,20 +33,24 @@ const BlogPage = () => {
       />
       <hr />
       <div className="posts reading-view">
-        {blogs.allStrapiBlog.nodes.map(blog => (
-          <Link to={blog.slug} className="blog" key={blog.id}>
-            <h2 className="blog-title">{blog.title}</h2>
-            <h5 className="blog-subtitle">
-              {blog.authored_date} • {blog.time_to_read} minute read
-            </h5>
-            <h4 className="blurb">{blog.blurb}</h4>
-            <div className="tags">
-              {blog.tags.map(tag => (
-                <p className="tag">{tag.label}</p>
-              ))}
-            </div>
-          </Link>
-        ))}
+        {
+          blogs.allStrapiBlog.nodes
+            .filter(blog => !blog.draft)
+            .map(blog => (
+              <Link to={blog.slug} className="blog" key={blog.id}>
+                <h2 className="blog-title">{blog.title}</h2>
+                <h5 className="blog-subtitle">
+                  {blog.authored_date} • {blog.time_to_read} minute read
+                </h5>
+                <h4 className="blurb">{blog.blurb}</h4>
+                <div className="tags">
+                  {blog.tags.map(tag => (
+                    <p className="tag">{tag.label}</p>
+                  ))}
+                </div>
+              </Link>
+          ))
+        }
       </div>
     </>
   )
