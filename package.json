@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@sendgrid/mail": "^7.3.0",
     "gatsby": "^2.17.11",
     "gatsby-cli": "^2.8.14",
     "gatsby-image": "^2.2.31",
@@ -26,6 +27,7 @@
     "slugify": "^1.3.6"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
