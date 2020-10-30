@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
     html: '<strong>https://www.fergusfrl.xyz/blog/</strong>',
   }
 
-  sgMail
+  await sgMail
     .send(message)
     .then(() => {
       console.log('Email sent')
