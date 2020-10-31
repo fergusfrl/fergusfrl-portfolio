@@ -8,9 +8,9 @@ exports.handler = async (event, context) => {
   console.log('CONTEXT:', context);
 
   const message = {
-    to: ['fergusfrl@gmail.com', 'fergus.farrell@akeela.io'],
+    to: ['gabskelly1995@gmail.com', 'fergus.farrell@akeela.io'],
     from: 'fergusfrl@gmail.com',
-    subject: 'A new blog is ready to read',
+    subject: 'A New Blog is Ready to Read',
     text: 'https://www.fergusfrl.xyz/blog/',
     html: '<strong>https://www.fergusfrl.xyz/blog/</strong>',
   }
