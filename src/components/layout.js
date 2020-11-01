@@ -8,14 +8,15 @@ import Footer from "./footer"
 const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = React.useState(false)
 
-  const checkDarkMode =
-    typeof window !== "undefined" &&
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+  /* UNCOMMENT TO ENABLE AUTO DARK MODE */
+  // const checkDarkMode =
+  //   typeof window !== "undefined" &&
+  //   window.matchMedia &&
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches
 
-  React.useEffect(() => {
-    setDarkMode(checkDarkMode)
-  }, [checkDarkMode])
+  // React.useEffect(() => {
+  //   setDarkMode(checkDarkMode)
+  // }, [checkDarkMode])
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
