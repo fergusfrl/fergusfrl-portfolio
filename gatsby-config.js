@@ -1,3 +1,5 @@
+require("dotenv");
+
 module.exports = {
   siteMetadata: {
     title: `FergusFrl`,
@@ -37,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://intense-green-forest.herokuapp.com`,
+        apiURL: process.env.STRAPI_URL,
         queryLimit: 100,
         contentTypes: [`blog`],
       },
