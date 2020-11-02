@@ -1,4 +1,5 @@
 const path = require(`path`)
+const slugify = require(`slugify`);
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -11,14 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
         allStrapiBlog(limit: $limit) {
           edges {
             node {
-              slug
-            }
-          }
-        }
-        allStrapiProject(limit: $limit) {
-          edges {
-            node {
-              slug
+              title
             }
           }
         }
@@ -33,13 +27,12 @@ exports.createPages = ({ graphql, actions }) => {
     console.log("data", res.data)
 
     res.data.allStrapiBlog.edges.forEach(edge => {
-      const slug = edge.node.slug
-      createPage({ path: slug, component: blogPost, context: { slug } })
-    })
-
-    res.data.allStrapiProject.edges.forEach(edges => {
-      const slug = edges.node.slug
-      createPage({ path: slug, component: projectPost, context: { slug } })
+      const title = edge.node.title
+      const slug = slugify(title, {
+        lower: true,
+        remove: /[/()]/gi,
+      })
+      createPage({ path: `blog/${slug}`, component: blogPost, context: { title } })
     })
   })
 }

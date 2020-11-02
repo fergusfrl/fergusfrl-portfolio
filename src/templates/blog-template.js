@@ -30,7 +30,11 @@ const BlogTemplate = ({
           />
         </div>
         <hr />
-        <PostNavigation next={next} prev={prev} postType="blog" />
+        <PostNavigation
+          next={next ? next.title : null}
+          prev={prev ? prev.title : null}
+          postType="blog"
+        />
       </div>
     </>
   )
@@ -39,14 +43,18 @@ const BlogTemplate = ({
 export default BlogTemplate
 
 export const blogQuery = graphql`
-  query BlogPostByPath($slug: String!) {
-    strapiBlog(slug: { eq: $slug }) {
+  query BlogPostByPath($title: String!) {
+    strapiBlog(title: { eq: $title }) {
       title
       authored_date(formatString: "MMMM DD, YYYY")
       time_to_read
       content
-      prev
-      next
+      next {
+        title
+      }
+      prev {
+        title
+      }
     }
   }
 `
