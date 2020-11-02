@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 const LINKS = [
   { label: "Home", to: "/" },
   { label: "Blog", to: "/blog/" },
-  { label: "Projects", to: "/projects/" },
+  // { label: "Projects", to: "/projects/" }, TODO: add project back in
 ]
 
 const Header = ({ toggleDarkMode }) => (

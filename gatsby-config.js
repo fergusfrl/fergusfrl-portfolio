@@ -37,9 +37,9 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://intense-forest-18182.herokuapp.com`,
+        apiURL: `https://intense-green-forest.herokuapp.com`,
         queryLimit: 100,
-        contentTypes: [`blog`, `project`],
+        contentTypes: [`blog`],
       },
     },
     {
