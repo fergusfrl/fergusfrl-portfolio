@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import slugify from "slugify"
+import Img from "gatsby-image"
 
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -15,6 +16,13 @@ const BlogPage = () => {
           blurb
           authored_date(formatString: "MMMM DD, YYYY")
           time_to_read
+          banner {
+            childImageSharp {
+              fluid(maxWidth: 800, maxHeight: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           tags {
             label
           }
@@ -43,6 +51,17 @@ const BlogPage = () => {
                 className="blog"
                 key={blog.id}
               >
+                {
+                  blog.banner && (
+                    <div className="blog-banner">
+                      <Img
+                        className="image"
+                        fluid={blog.banner.childImageSharp.fluid}
+                        alt="Blog banner"
+                      />
+                    </div>
+                  )
+                }
                 <h2 className="blog-title">{blog.title}</h2>
                 <h5 className="blog-subtitle">
                   {blog.authored_date} • {blog.time_to_read} minute read

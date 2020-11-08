@@ -150,8 +150,11 @@ hr {
   color: var(--primary-text-color);
 }
 
-.blog-title {
+.blog-banner {
   margin-top: 5em;
+}
+
+.blog-title {
   color: var(--primary-highlight-color);
   text-decoration: underline;
 }
