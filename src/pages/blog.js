@@ -16,13 +16,6 @@ const BlogPage = () => {
           blurb
           authored_date(formatString: "MMMM DD, YYYY")
           time_to_read
-          banner {
-            childImageSharp {
-              fluid(maxWidth: 800, maxHeight: 300) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           tags {
             label
           }
@@ -51,7 +44,7 @@ const BlogPage = () => {
                 className="blog"
                 key={blog.id}
               >
-                {
+                {/* {
                   blog.banner && (
                     <div className="blog-banner">
                       <Img
@@ -61,7 +54,7 @@ const BlogPage = () => {
                       />
                     </div>
                   )
-                }
+                } */}
                 <h2 className="blog-title">{blog.title}</h2>
                 <h5 className="blog-subtitle">
                   {blog.authored_date} • {blog.time_to_read} minute read
