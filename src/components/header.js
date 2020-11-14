@@ -3,7 +3,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const LINKS = [
-  { label: "Home", to: "/" },
+  { label: "About", to: "/" },
   { label: "Blog", to: "/blog/" },
   // { label: "Projects", to: "/projects/" }, TODO: add project back in
 ]

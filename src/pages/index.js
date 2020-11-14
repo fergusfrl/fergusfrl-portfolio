@@ -8,7 +8,7 @@ import Hero from "../components/hero"
 const IndexPage = ({ data }) => {
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="About" />
       <Hero
         text="Hello, I’m Fergus Farrell. I’m a Software Developer living in Christchurch, NZ."
         highlights={["Fergus Farrell"]}
