@@ -11,6 +11,8 @@ const BlogTemplate = ({
     strapiBlog: { title, authored_date, time_to_read, content, prev, next },
   },
 }) => {
+  const lineBreakSupport = text => text.value.replaceAll(/\<br \/\>/gi, '\n');
+
   return (
     <>
       <SEO title={title} />
@@ -21,7 +23,10 @@ const BlogTemplate = ({
         <div className="blog-content">
           <ReactMarkdown
             source={content}
-            renderers={{ code: CodeBlock }}
+            renderers={{
+              text: lineBreakSupport,
+              code: CodeBlock
+            }}
             transformImageUri={uri =>
               uri.startsWith("http")
                 ? uri

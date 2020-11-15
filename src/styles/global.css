@@ -157,6 +157,7 @@ hr {
 .blog-title {
   color: var(--primary-highlight-color);
   text-decoration: underline;
+  margin-top: 5em;
 }
 
 .blog-title:hover {

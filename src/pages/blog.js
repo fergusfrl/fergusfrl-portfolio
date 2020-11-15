@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import slugify from "slugify"
-import Img from "gatsby-image"
 
 import SEO from "../components/seo"
 import Hero from "../components/hero"
