@@ -27,7 +27,7 @@ const BlogPage = () => {
     <>
       <SEO title="Blog" />
       <Hero
-        text="The Blog: thoughts on life, work and everything in between"
+        text="The Blog: technical guides, interesting projects and some fun things I've learned"
         highlights={["The Blog"]}
       />
       <hr />
@@ -43,21 +43,15 @@ const BlogPage = () => {
                 className="blog"
                 key={blog.id}
               >
-                <div
-                  data-sal="slide-right"
-                  data-sal-delay="200"
-                  // data-sal-easing="ease-in-out"
-                >
-                  <h2 className="blog-title">{blog.title}</h2>
-                  <h5 className="blog-subtitle">
-                    {blog.authored_date} • {blog.time_to_read} minute read
-                  </h5>
-                  <h4 className="blurb">{blog.blurb}</h4>
-                  <div className="tags">
-                    {blog.tags.map(tag => (
-                      <p className="tag">{tag.label}</p>
-                    ))}
-                  </div>
+                <h2 className="blog-title">{blog.title}</h2>
+                <h5 className="blog-subtitle">
+                  {blog.authored_date} • {blog.time_to_read} minute read
+                </h5>
+                <h4 className="blurb">{blog.blurb}</h4>
+                <div className="tags">
+                  {blog.tags.map(tag => (
+                    <p className="tag">{tag.label}</p>
+                  ))}
                 </div>
               </Link>
           ))
