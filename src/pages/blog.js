@@ -21,7 +21,7 @@ const BlogPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -49,7 +49,7 @@ const BlogPage = () => {
                 </h5>
                 <h4 className="blurb">{blog.blurb}</h4>
                 <div className="tags">
-                  {blog.tags.map(tag => (
+                  {blog.tags.sort().map(tag => (
                     <p className="tag">{tag.label}</p>
                   ))}
                 </div>
