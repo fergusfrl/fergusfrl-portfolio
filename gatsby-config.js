@@ -7,9 +7,11 @@ module.exports = {
     title: `FergusFrl`,
     description: `Fergus Farrell's online blog and project portfolio`,
     author: `Fergus Farrell`,
+    siteUrl: `https://fergusfrl.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -52,5 +54,12 @@ module.exports = {
         precachePages: [`/`, `/blog`, `/projects`, `/blog/*`, `/projects/*`],
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://fergusfrl.com`,
+        sitemap: `https://fergusfrl.com/sitemap.xml`,
+      }
+    }
   ],
 }

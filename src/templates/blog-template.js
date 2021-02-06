@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown"
 import SEO from "../components/seo"
 import CodeBlock from "../components/code-block"
 import PostNavigation from "../components/post-navigation"
+// import Subscribe from "../components/subscribe"
 
 const BlogTemplate = ({
   data: {
@@ -30,6 +31,7 @@ return (
                 : `${process.env.IMAGE_BASE_URL}${uri}`
             }
           />
+          {/* <Subscribe /> */}
         </div>
         <hr />
         <PostNavigation
