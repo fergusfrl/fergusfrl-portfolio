@@ -16,6 +16,7 @@ body {
   --primary-highlight-color: #FCB614;
   --border-color: #494c4e;
   --secondary-text-color: #6d6d6d;
+  --box-shadow-color: #494c4e;
 
   --image-filter-value: grayscale(0%);
 
@@ -30,6 +31,7 @@ body {
   --primary-text-color: #fff;
   --primary-highlight-color: #FCB614;
   --secondary-text-color: #ababab;
+  --box-shadow-color: #fff;
 
   --image-filter-value: grayscale(30%);
 }
@@ -161,6 +163,11 @@ img {
   height: 30px;
   color: var(--primary-highlight-color);
   font-size: 2em;
+  transition: transform .3s;
+}
+
+.iconSM:hover {
+  transform: scale(1.2);
 }
 
 hr {
@@ -281,7 +288,7 @@ a.highlight:hover {
   margin-top: 5em;
   padding: 2em;
   border: 1px solid lightgrey;
-  box-shadow: var(--border-color) 4px 4px;
+  box-shadow: var(--border-color) 6px 6px;
 }
 
 .subscribe p {
@@ -302,35 +309,63 @@ a.highlight:hover {
 
 .subscribe input[type=text] {
   flex: 1 0 auto;
-  padding: 1em;
+  padding: 1.25em;
   font-family: Libre Baskerville, Georgia, serif;
+  border-radius: 0;
+  border: 1px solid var(--border-color);
 }
 
-.error {
+.subscribe .email-response {
   margin-top: 1em;
-  font-size: 0.8em;
-  color: #e53935;
 }
 
-.success {
-  margin-top: 1em;
-  font-size: 0.8em;
+.subscribe .success {
+  color: var(--primary-highlight-color)
 }
 
-.success span {
+.subscribe .unsubscribe {
+  font-size: 0.7em;
+  padding-top: 1.5em;
   color: var(--primary-highlight-color);
-  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.subscribe .unsubscribe:hover {
+  text-decoration: none;
+}
+
+.subscribe .error {
+  color: #FC3F14;
 }
 
 .subscribe button {
+  color: #494c4e;
   width: 200px;
-  background-color: #FCB614;
+  background-color: var(--primary-highlight-color);
   border: none;
-  margin-left: 1em;
-  letter-spacing: .25em;
+  margin: -10px 0 0 1em;
+  letter-spacing: .05em;
   font-family: Libre Baskerville, Georgia, serif;
   cursor: pointer;
-  transition: transform 150ms ease-out;
+  box-shadow: 10px 10px  var(--box-shadow-color);
+  transition: transform 0.1s, box-shadow 0.1s;
+  outline: none;
+}
+
+.subscribe button:hover {
+  box-shadow: 6px 6px  var(--box-shadow-color);
+  transform: translate(4px, 4px);
+}
+
+.subscribe button:active {
+  box-shadow: 0px 0px  var(--box-shadow-color);
+  transform: translate(10px, 10px);
+}
+
+.subscribe button:disabled {
+  box-shadow: 0px 0px  var(--box-shadow-color);
+  transform: translate(10px, 10px);
 }
 
 footer {

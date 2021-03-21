@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Fergus Farrell <fergusfrl@gmail.com>",
   "dependencies": {
-    "axios": "^0.21.0",
     "gatsby": "^2.17.11",
     "gatsby-cli": "^2.8.14",
     "gatsby-image": "^2.2.31",
@@ -14,6 +13,7 @@
     "gatsby-plugin-offline": "^3.0.25",
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-robots-txt": "^1.5.3",
+    "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^2.2.37",
     "gatsby-plugin-sitemap": "^2.8.0",
     "gatsby-source-filesystem": "^2.1.36",

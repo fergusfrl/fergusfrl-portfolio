@@ -4,7 +4,7 @@ import slugify from "slugify";
 
 import SEO from "../components/seo";
 import Hero from "../components/hero";
-// import Subscribe from "../components/subscribe";
+import Subscribe from "../components/subscribe";
 
 const BlogPage = () => {
   const blogs = useStaticQuery(graphql`
@@ -57,7 +57,7 @@ const BlogPage = () => {
               </Link>
           ))
         }
-        {/* <Subscribe /> */}
+        <Subscribe />
       </div>
     </>
   )

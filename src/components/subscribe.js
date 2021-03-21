@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { ERROR_MESSAGES } from '../constants';
+
+const validateEmail = email => {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
 const Subscribe = () => {
   const [email, setEmail] = useState('');
-  const [error, setError] = useState(false);
+  const [errorCode, setErrorCode] = useState(0);
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -13,33 +18,42 @@ const Subscribe = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    if (!isValidateEmail(email)) {
+
+    if (!validateEmail(email)) {
       setSuccess(false);
-      setError(true);
+      setErrorCode(400);
     } else {
-      setError(false);
       setSubmitting(true);
+      setErrorCode(0);
+      setSuccess(false);
+  
       fetch('https://us-central1-test-database-200da.cloudfunctions.net/subscribeToBlog', {
         method: 'post',
-        body: JSON.stringify({ email })
-      }).then(() => {
-        setSuccess(true);
-        setEmail('');
+        body: JSON.stringify({ email }),
+      }).then(res => {
+        if (res.status === 409) {
+          setErrorCode(409);
+        }
+        if (res.status === 200) {
+          setEmail('');
+          setSuccess(true);
+        }
       }).catch(() => {
-        console.log('Error posting email')
+        setErrorCode(500);
       }).finally(() => {
         setSubmitting(false);
       });
     }
-  }
-
-  const isValidateEmail = email => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
+  };
 
   return (
-    <div className="subscribe">
+    <div
+      className="subscribe"
+      data-sal="slide-left"
+      data-sal-delay="100"
+      data-sal-duration="500"
+      data-sal-easing="ease"
+    >
       <h2>Join the newsletter</h2>
       <p>Subscribe to get my latest content by email.</p>
       <p>No spam, ever.</p>
@@ -51,16 +65,17 @@ const Subscribe = () => {
           onChange={handleTextChange}
         />
         <button disabled={submitting} onClick={handleSubmit}>
-          <span className="button-box">Subscribe</span>
+          <h3>Subscribe</h3>
         </button>
       </form>
-      {error && <p className="error">Please enter a valid email address</p>}
-        {success && (
-          <p className="success">
-            Thank you for subscribing!
-            Please <span>check your inbox</span> to confirm your subscription.
-          </p>
-        )}
+      { errorCode > 0 && (
+        <p className="email-response error">{ERROR_MESSAGES[errorCode]}</p>
+      ) }
+      { success && (
+        <p className="email-response success">
+          <strong>Welcome aboard!</strong> You'll be the first to know when I release a new blog post.
+        </p>
+      ) }
     </div>
   );
 };
