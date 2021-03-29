@@ -51,7 +51,7 @@ module.exports = {
       options: {
         apiURL: process.env.STRAPI_URL,
         queryLimit: 100,
-        contentTypes: [`blog`],
+        contentTypes: [`blog`, `training-week`],
       },
     },
     {
@@ -66,6 +66,7 @@ module.exports = {
         host: `https://fergusfrl.com`,
         sitemap: `https://fergusfrl.com/sitemap.xml`,
       }
-    }
+    },
+    `gatsby-plugin-react-leaflet`,
   ],
 }

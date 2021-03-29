@@ -1,46 +1,30 @@
 import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import slugify from "slugify";
 import { ToWords } from 'to-words';
+import { ACTIVITY_WEEK_CORRECTION } from '../constants';
 
 import SEO from "../components/seo";
 import Hero from "../components/hero";
-import { Link } from "gatsby";
+import TrainingWeekChart from '../components/training-week-chart';
 
 const toWords = new ToWords();
 
 const C2C = () => {
-  // TODO: graphql query to strapi for strava weeks
-  const weeks = [
+  const weeks = useStaticQuery(graphql`
     {
-      id: 38,
-      fromDate: 'April 5',
-      toDate: 'April 11',
-      totalDistance: {
-        cycle: 130,
-        run: 16,
-        kayak: 10,
+      allStrapiTrainingWeek(sort: { order: DESC, fields: strapiId }) {
+        nodes {
+          fromDate(formatString: "MMMM DD")
+          toDate(formatString: "MMMM DD")
+          totalDistanceCycle
+          totalDistanceKayak
+          totalDistanceRun
+          strapiId
+        }
       }
-    },
-    {
-      id: 2,
-      fromDate: 'March 29',
-      toDate: 'April 4',
-      totalDistance: {
-        cycle: 90,
-        run: 20,
-        kayak: 60,
-      }
-    },
-    {
-      id: 1,
-      fromDate: 'March 22',
-      toDate: 'March 29',
-      totalDistance: {
-        cycle: 120,
-        run: 30,
-        kayak: 50,
-      }
-    },
-  ];
+    }
+  `);
 
   return (
     <>
@@ -57,15 +41,28 @@ const C2C = () => {
       <hr />
       <div className="posts reading-view">
         {
-          weeks.map(week => (
-            <Link className="blog" key={week.id}>
-              <h2 className="blog-title">{`Week ${toWords.convert(week.id)}`}</h2>
-              <h5 className="blog-subtitle">
-                {week.fromDate} → {week.toDate}
-              </h5>
-              {/* TODO: add chart.js for horizontal bar charts for total distances */}
-            </Link>
-          ))
+          weeks.allStrapiTrainingWeek.nodes.map(week => {
+            const to = `week-${slugify(toWords.convert(week.strapiId - ACTIVITY_WEEK_CORRECTION), { lower: true, remove: /[/()]/gi })}`
+            return (
+              <Link
+                className="blog"
+                key={week.strapiId}
+                to={to}
+              >
+                <h2 className="blog-title">{`Week ${toWords.convert(week.strapiId - ACTIVITY_WEEK_CORRECTION)}`}</h2>
+                <h5 className="blog-subtitle">
+                  {week.fromDate} → {week.toDate}
+                </h5>
+                <div>
+                  <TrainingWeekChart
+                    cycleDist={week.totalDistanceCycle}
+                    runDist={week.totalDistanceRun}
+                    kayakDist={week.totalDistanceKayak}
+                  />
+                </div>
+              </Link>
+            );
+          })
         }
       </div>
     </>

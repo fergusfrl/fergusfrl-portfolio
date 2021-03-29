@@ -34,7 +34,7 @@ const PostNavigation = ({ postType, next, prev }) => {
       <br />
       <br />
       <Link className="nav-link all" to={`/${postType}/`}>
-        {postType === "blog" ? "All Blogs" : "All Projects"}
+        {postType === "blog" ? "All Blogs" : "All Weeks"}
       </Link>
     </>
   )

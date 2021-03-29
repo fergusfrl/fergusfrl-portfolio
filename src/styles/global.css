@@ -433,6 +433,35 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+.activity {
+  margin: 2em 0;
+}
+
+.activity h6 {
+  margin: 0;
+  color: var(--secondary-text-color);
+  text-transform: capitalize;
+}
+
+.activity h3 {
+  margin-top: 0.5em;
+}
+
+.activity .stats {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity .stats p {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.activity .leaflet-control-zoom a {
+  text-decoration: none;
+}
+
 @media (max-width: 700px) {
   .blog-content img {
     width: 600px;
