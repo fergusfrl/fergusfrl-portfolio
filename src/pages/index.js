@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
           Comrad Medical Systems
         </a>{" "}
         to optimise patient flow for efficiency and effectiveness. In the weekends I'm a whitewater
-        kayaker, skier and outdoor adventurer.
+        kayaker, mountain biker and outdoor adventurer.
       </p>
       <p className="reading-view">
         I'm also technology tickerer. At home, using new software tools and

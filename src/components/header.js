@@ -6,6 +6,7 @@ import Switch from "./switch"
 const LINKS = [
   { label: "About", to: "/" },
   { label: "Blog", to: "/blog/" },
+  { label: "C2C", to: "/coast-to-coast/" },
   // { label: "Projects", to: "/projects/" }, TODO: add project back in
 ]
 

@@ -51,7 +51,7 @@ const BlogPage = () => {
                 <h4 className="blurb">{blog.blurb}</h4>
                 <div className="tags">
                   {blog.tags.sort().map(tag => (
-                    <p className="tag">{tag.label}</p>
+                    <p key={`${blog.id}-${tag.label}`} className="tag">{tag.label}</p>
                   ))}
                 </div>
               </Link>

@@ -3,3 +3,5 @@ export const ERROR_MESSAGES = {
   409: 'Email already exists.',
   500: 'Something went wrong.',
 };
+
+export const ACTIVITY_WEEK_CORRECTION = 6;
