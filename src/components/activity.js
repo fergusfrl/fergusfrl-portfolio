@@ -11,7 +11,7 @@ const Stat = ({ label, value }) => (
 );
 
 const Activity = ({ activity, title, startDate, duration, averageSpeed, distance, elevation, polyline }) => {
-  const leafletPolyline = decodePolyline(polyline).map(coord => [coord.lat, coord.lng]);
+  const leafletPolyline = polyline && decodePolyline(polyline).map(coord => [coord.lat, coord.lng]);
 
   return (
     <div className="activity">
@@ -26,7 +26,7 @@ const Activity = ({ activity, title, startDate, duration, averageSpeed, distance
         <Stat label="Distance" value={`${distance} km`} />
         <Stat label="Elevation" value={`${elevation} m`} />
       </div>
-      {typeof window !== 'undefined' && (
+      {leafletPolyline && typeof window !== 'undefined' && (
         <MapContainer scrollWheelZoom={false} bounds={leafletPolyline} style={{ maxWidth: 650, height: 300 }}>
           <TileLayer
             url="http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=6170aad10dfd42a38d4d8c709a536f38"
