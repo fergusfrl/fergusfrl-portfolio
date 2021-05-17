@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment-timezone';
 import decodePolyline from 'decode-google-map-polyline';
-import { MapContainer, TileLayer, Polyline } from 'react-leaflet';
+import { Map, TileLayer, Polyline } from 'react-leaflet';
 
 const Stat = ({ label, value }) => (
   <div className="stat">
@@ -27,13 +27,13 @@ const Activity = ({ activity, title, startDate, duration, averageSpeed, distance
         <Stat label="Elevation" value={`${elevation} m`} />
       </div>
       {leafletPolyline && typeof window !== 'undefined' && (
-        <MapContainer scrollWheelZoom={false} bounds={leafletPolyline} style={{ maxWidth: 650, height: 300 }}>
+        <Map scrollWheelZoom={false} bounds={leafletPolyline} style={{ maxWidth: 650, height: 300 }}>
           <TileLayer
             url="http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=6170aad10dfd42a38d4d8c709a536f38"
             attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           />
           <Polyline pathOptions={{ color: '#FCB614' }} positions={leafletPolyline} />
-        </MapContainer>
+        </Map>
       )}
     </div>
   );

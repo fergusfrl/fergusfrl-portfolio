@@ -37,7 +37,7 @@ const TrainingWeekChart = ({ cycleDist, runDist, kayakDist, removeMax = false })
               fontFamily: 'Libre Baskerville, Georgia, serif',
               display: false,
               beginAtZero: true,
-              max: removeMax ? Math.max(cycleDist, runDist, kayakDist) + 7  : 100,
+              max: removeMax ? Math.max(cycleDist, runDist, kayakDist) + 7  : 150,
             },
             gridLines: {
               display: false,
