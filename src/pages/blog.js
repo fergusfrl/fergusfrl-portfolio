@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import slugify from "slugify";
 
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import Subscribe from "../components/subscribe";
+import FilterChip from "../components/filter-chip";
 
 const BlogPage = () => {
-  const blogs = useStaticQuery(graphql`
+  const [filters, setFilters] = useState([]);
+
+  const handleFilter = ({ operation, value }) => {
+    if (operation === 'add') {
+      setFilters([...filters, value])
+    }
+
+    if (operation === 'remove') {
+      setFilters(filters.filter(item => item !== value))
+    }
+  }
+
+  const data = useStaticQuery(graphql`
     {
       allStrapiBlog(sort: { order: DESC, fields: authored_date }) {
         nodes {
@@ -21,6 +34,12 @@ const BlogPage = () => {
           }
         }
       }
+
+      allStrapiTag(sort: {fields: label, order: ASC}) {
+        nodes {
+          label
+        }
+      }
     }
   `);
 
@@ -32,9 +51,16 @@ const BlogPage = () => {
         highlights={["The Blog"]}
       />
       <hr />
+      <div className="blog-filter">
+        { data.allStrapiTag.nodes.map(tag => <FilterChip key={tag.label} label={tag.label} handleFilter={handleFilter} />) }
+      </div>
       <div className="posts reading-view">
         {
-          blogs.allStrapiBlog.nodes
+          data.allStrapiBlog.nodes
+            .filter(blog => {
+              if (filters.length === 0) return true;
+              return blog.tags.some(tag => filters.includes(tag.label));
+            })
             .map(blog => (
               <Link
                 to={slugify(blog.title, {

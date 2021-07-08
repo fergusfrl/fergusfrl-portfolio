@@ -24,6 +24,8 @@ body {
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
   min-height: 100vh;
+
+  cursor: url(../images/dark-dot.png) 0 0, auto !important;
 }
 
 .app.dark {
@@ -34,6 +36,8 @@ body {
   --box-shadow-color: #fff;
 
   --image-filter-value: grayscale(30%);
+
+  cursor: url(../images/light-dot.png) 0 0, auto !important;
 }
 
 header {
@@ -66,7 +70,6 @@ strong {
 }
 
 .logo {
-  cursor: pointer;
   padding: 20px;
   border: 6px solid var(--primary-text-color);
   transform: rotate(0deg);
@@ -76,6 +79,7 @@ strong {
 .logo-link {
   text-decoration: none;
   color: var(--primary-text-color);
+  cursor: inherit;
 }
 
 .logo div {
@@ -105,6 +109,7 @@ strong {
   color: var(--primary-text-color);
   text-decoration: none;
   margin: auto 3em auto 0;
+  cursor: inherit;
 }
 
 .link:hover {
@@ -168,6 +173,7 @@ img {
   color: var(--primary-highlight-color);
   font-size: 2em;
   transition: transform .3s;
+  cursor: inherit;
 }
 
 .iconSM:hover {
@@ -183,6 +189,7 @@ hr {
 .blog {
   text-decoration: none;
   color: var(--primary-text-color);
+  cursor: inherit;
 }
 
 .blog-banner {
@@ -226,6 +233,7 @@ hr {
   text-decoration: none;
   color: var(--primary-highlight-color);
   padding: 1em;
+  cursor: inherit;
 }
 
 .nav-link.next {
@@ -286,6 +294,32 @@ a.highlight:hover {
   padding: 0.1em 1em;
   border: 1px solid var(--primary-text-color);
   border-radius: 2em;
+  white-space: nowrap;
+}
+
+.blog-filter {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-filter button {
+  background: none;
+	color: inherit;
+	padding: 0.5em 0.8em;
+	font: inherit;
+}
+
+.filter {
+  transition: 0.2s ease;
+}
+
+.filter:hover {
+  opacity: 0.7;
+}
+
+.filter.selected {
+  color: var(--primary-highlight-color) !important;
 }
 
 .subscribe {
@@ -317,6 +351,7 @@ a.highlight:hover {
   font-family: Libre Baskerville, Georgia, serif;
   border-radius: 0;
   border: 1px solid var(--border-color);
+  cursor: inherit;
 }
 
 .subscribe .email-response {
@@ -332,7 +367,6 @@ a.highlight:hover {
   padding-top: 1.5em;
   color: var(--primary-highlight-color);
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .subscribe .unsubscribe:hover {
@@ -351,10 +385,10 @@ a.highlight:hover {
   margin: -10px 0 0 1em;
   letter-spacing: .05em;
   font-family: Libre Baskerville, Georgia, serif;
-  cursor: pointer;
   box-shadow: 10px 10px  var(--box-shadow-color);
   transition: transform 0.1s, box-shadow 0.1s;
   outline: none;
+  cursor: inherit;
 }
 
 .subscribe button:hover {
@@ -385,6 +419,7 @@ footer {
   width: 58px;
   height: 30px;
   margin: auto 3em auto 0;
+  cursor: inherit;
 }
 
 .switch input {
@@ -395,7 +430,6 @@ footer {
 
 .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
@@ -404,6 +438,7 @@ footer {
   -webkit-transition: .3s;
   transition: .3s;
   border-radius: 30px;
+  cursor: inherit;
 }
 
 .slider:before {
@@ -417,6 +452,7 @@ footer {
   -webkit-transition: .3s;
   transition: .3s;
   border-radius: 50%;
+  cursor: inherit;
 }
 
 input:checked + .slider {

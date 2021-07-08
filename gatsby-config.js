@@ -51,7 +51,7 @@ module.exports = {
       options: {
         apiURL: process.env.STRAPI_URL,
         queryLimit: 100,
-        contentTypes: [`blog`, `training-week`],
+        contentTypes: [`blog`, `training-week`, `tag`],
       },
     },
     {
