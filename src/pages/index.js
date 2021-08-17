@@ -24,16 +24,16 @@ const IndexPage = ({ data }) => {
         I am a full stack web developer with a passion for simple, clean design.
         <span className="highlight"> Simplicity is elegance.</span>
         <br />
-        Currently, I am working at{" "}
+        I work at{" "}
         <a
-          href="https://comrad.co.nz/"
+          href="https://www.batch.nz/"
           target="_blank"
           rel="noopener noreferrer"
           className="highlight"
         >
-          Comrad Medical Systems
+          Batch
         </a>{" "}
-        to optimise patient flow for efficiency and effectiveness. In the weekends I'm a whitewater
+        where we dream up, design and develop websites, web apps and online stores. In the weekends I'm a whitewater
         kayaker, mountain biker and outdoor adventurer.
       </p>
       <p className="reading-view">
