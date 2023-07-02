@@ -30,6 +30,13 @@
 	<link rel="canonical" href={$page.url.href} />
 	<meta property="og:url" content={$page.url.href} />
 	<meta name="twitter:url" content={$page.url.href} />
+
+	<!-- Other -->
+	<meta
+		name="robots"
+		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+	/>
+	<html lang="en-NZ" />
 </svelte:head>
 
 {#key data.url}
