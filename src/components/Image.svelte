@@ -31,24 +31,14 @@
 	});
 </script>
 
-<div class="flex">
-	<div
-		class="absolute"
-		bind:clientHeight={h}
-		bind:clientWidth={w}
-		style={fill
-			? `width: 100%; height: 100%;`
-			: `width: ${Number(width)}px; height: ${Number(height)}px;`}
-	>
-		<canvas bind:this={canvas} width={w} height={h} class="absolute left-0 top-0" />
-		<img
-			{alt}
-			width={w}
-			height={h}
-			{loading}
-			{src}
-			decoding="async"
-			class="absolute left-0 top-0"
-		/>
-	</div>
+<div
+	class="absolute"
+	bind:clientHeight={h}
+	bind:clientWidth={w}
+	style={fill
+		? `width: 100%; height: 100%;`
+		: `width: ${Number(width)}px; height: ${Number(height)}px;`}
+>
+	<canvas bind:this={canvas} width={w} height={h} class="absolute left-0 top-0" />
+	<img {alt} width={w} height={h} {loading} {src} decoding="async" class="absolute left-0 top-0" />
 </div>
