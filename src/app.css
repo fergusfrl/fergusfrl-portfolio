@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply text-slate;
+	}
+	.reading-view {
+		@apply mx-auto max-w-3xl;
+	}
+	@font-face {
+		font-family: 'Libre Baskerville';
+		src: local('Libre Baskerville'), local('Libre-Baskerville'), local('libre baskerville'),
+			local('libre-baskerville'), url('/fonts/libre-baskerville/LibreBaskerville-Regular.ttf');
+		font-weight: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Libre Baskerville Bold';
+		src: local('Libre Baskerville Bold'), local('Libre-Baskerville-Bold'),
+			local('libre baskerville bold'), local('libre-baskerville-Bold'),
+			url('/fonts/libre-baskerville/LibreBaskerville-Bold.ttf');
+		font-weight: bold;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Libre Baskerville Italic';
+		src: local('Libre Baskerville Italic'), local('Libre-Baskerville-Italic'),
+			local('libre baskerville italic'), local('libre-baskerville-Italic'),
+			url('/fonts/libre-baskerville/LibreBaskerville-Italic.ttf');
+		font-weight: italic;
+		font-display: swap;
+	}
+
+	/* Article */
+	.prose :is(h1, h2, h3) {
+		@apply mt-4 text-xl font-bold;
+	}
+
+	.prose :is(h4, h5, h6) {
+		@apply mt-4 text-lg font-bold;
+	}
+
+	.prose p {
+		@apply leading-loose;
+	}
+
+	.prose pre {
+		@apply relative whitespace-pre-wrap rounded p-4;
+	}
+
+	.prose p code {
+		@apply rounded-sm bg-slate-200 px-1 py-[2px] font-mono text-orange-500;
+	}
+
+	.prose ol {
+		@apply list-inside list-decimal space-y-2;
+	}
+
+	.prose ul {
+		@apply list-inside list-disc space-y-2;
+	}
+
+	.prose img {
+		@apply border border-slate-lightest;
+	}
+
+	.prose figcaption {
+		@apply -mt-2 text-xs text-slate-light;
+	}
+}
