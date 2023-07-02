@@ -17,8 +17,6 @@ Let's start off with a brand new page to our task list.
 
 ![one](https://storage.googleapis.com/fergusfrl-blog/new_page_f65ec92ee4/new_page_f65ec92ee4.png)
 
-<figcaption>Notion side menu</figcaption>
-
 I named the new page _Tasks_.
 
 ### 🔨 Create a Table

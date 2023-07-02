@@ -1,9 +1,13 @@
+<script>
+	import image from '$lib/assets/wedding-longshot.jpeg';
+</script>
+
 <div class="flex flex-col gap-y-10 md:gap-y-20">
 	<h1 class="reading-view text-3xl font-bold leading-relaxed md:text-4xl">
 		Hello, I’m <span class="text-primary">Fergus Farrell</span>. I’m a Software Developer living in
 		Christchurch, NZ.
 	</h1>
-	<img src="/images/wedding-longshot.jpeg" alt="Fergus Farrell wedding landscape" />
+	<img src={image} alt="Fergus Farrell wedding landscape" />
 	<p class="reading-view leading-loose">
 		I am a full stack web developer with a passion for simple, clean design.
 		<span class="text-primary"> Simplicity is elegance.</span>
