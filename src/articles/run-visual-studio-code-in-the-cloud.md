@@ -20,13 +20,13 @@ Fortunately it is possible to host your own instance of VS Code on the cloud usi
 
 Create a new Google Cloud Platform Compute Engine. Ensure that the server is running Ubuntu, I am running Ubuntu version 16.0.4 LTS. Select both "Allow HTTP traffic" and "Allow HTTPS traffic" so that they are enabled. The remaining config can be left as default. Be aware that keeping a running VM instance will incur costs of around $0.04 an hour.
 
-![image-one](https://storage.googleapis.com/fergusfrl-blog/code_server_config_54fe05f1d2/code_server_config_54fe05f1d2.png)
+![one](https://storage.googleapis.com/fergusfrl-blog/code_server_config_54fe05f1d2/code_server_config_54fe05f1d2.png)
 
 ### 🗄️ SSH into the VM
 
 Once your VM has been provisioned, select the SSH option which will open an in browser terminal as seen below:
 
-![image-two](https://storage.googleapis.com/fergusfrl-blog/ssh_terminal_7a68ade641/ssh_terminal_7a68ade641.png)
+![two](https://storage.googleapis.com/fergusfrl-blog/ssh_terminal_7a68ade641/ssh_terminal_7a68ade641.png)
 
 ### ⌛ Install the latest version of Code-Server
 

@@ -13,7 +13,7 @@ tags:
 
 A few weeks ago, I ran into a problem where images I uploaded to Strapi became unavailable after about an hour. When I viewed the media library, the images I had uploaded looked like this:
 
-![image-one](https://storage.googleapis.com/fergusfrl-blog/media_library_blank_844b7e7e5f/media_library_blank_844b7e7e5f.png)
+![one](https://storage.googleapis.com/fergusfrl-blog/media_library_blank_844b7e7e5f/media_library_blank_844b7e7e5f.png)
 
 The problem is that I had deployed my Strapi project to Heroku.
 
@@ -40,7 +40,7 @@ If you don't already have a GCP account, set one up for free here. It does requi
 Navigate to Storage and select the CREATE BUCKET button.
 Name your bucket, choose the region and storage type which best suites you. Ensure that you select fine grain as the access type.
 
-![image-two](https://storage.googleapis.com/fergusfrl-blog/save_bucket_bde616750d/save_bucket_bde616750d.png)
+![two](https://storage.googleapis.com/fergusfrl-blog/save_bucket_bde616750d/save_bucket_bde616750d.png)
 
 #### 2. Create Service Account
 

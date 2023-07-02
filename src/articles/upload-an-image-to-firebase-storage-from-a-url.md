@@ -18,7 +18,7 @@ This guide assumes that you have a Firebase Project set up already. If you haven
 
 In your Firebase console, navigate to the Storage tab.
 
-![image-one](https://storage.googleapis.com/fergusfrl-blog/storage_199db5fd98/storage_199db5fd98.png)
+![one](https://storage.googleapis.com/fergusfrl-blog/storage_199db5fd98/storage_199db5fd98.png)
 
 Follow the setup wizard. I just selected the default setting for this project. It it possible to go back and change these once setup so don't worry too much about what is selected here.
 
@@ -134,19 +134,19 @@ $ firebase deploy
 
 Once your function has successfully deployed, navigate to the Functions tab in your Firebase console. You should see that your function is available.
 
-![image-two](https://storage.googleapis.com/fergusfrl-blog/functions_261b839950/functions_261b839950.png)
+![two](https://storage.googleapis.com/fergusfrl-blog/functions_261b839950/functions_261b839950.png)
 
 ### Using the Function
 
 Now the function has deployed, we can test it to make sure it's working. Our function is an http cloud function, so we can test it by sending a post request to the function. I do this using Postman. The URL for the request can be found in the Functions tab of the firebase console.
 
-![image-three](https://res.cloudinary.com/dohvgycsm/image/upload/v1601782204/f38ocd1hgwearawifskt.png)
+![three](https://res.cloudinary.com/dohvgycsm/image/upload/v1601782204/f38ocd1hgwearawifskt.png)
 
 Add the `imageUrl` and the `destination` to the body of the request then hit send.
 
 Once you get a 200 response code, navigate to the Storage tab in the Firebase console.
 
-![image-four](https://storage.googleapis.com/fergusfrl-blog/saved_file_fa750fffb3/saved_file_fa750fffb3.png)
+![four](https://storage.googleapis.com/fergusfrl-blog/saved_file_fa750fffb3/saved_file_fa750fffb3.png)
 
 Et viola! We now have a Cloud Function that will save an image to your Firebase Storage given only a url. This image is ready to be served to any client application integrated with your Firebase Project.
 

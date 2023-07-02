@@ -19,7 +19,7 @@ We first need to create a Static IP Address. This address will be used to link t
 
 Navigate to VPC network, External IP addresses. Select the Reserve Static Address button. Enter a name of your choice. Change the Type to Global as seen in the screenshot below:
 
-![image-one](https://storage.googleapis.com/fergusfrl-blog/static_ip_address_6d4b6b4738/static_ip_address_6d4b6b4738.png)
+![one](https://storage.googleapis.com/fergusfrl-blog/static_ip_address_6d4b6b4738/static_ip_address_6d4b6b4738.png)
 
 Select Reserve.
 
@@ -39,7 +39,7 @@ Navigate to the Load Balancer certificates tab. I've included the link here beca
 
 Select Create SSL Certificate. Enter a name of your choice and set the Create Mode to Create Google-managed Certificate. Add your domain name to the Domains input. The configuration should like similar to the screenshot below:
 
-![image-two](https://storage.googleapis.com/fergusfrl-blog/ssl_certificate_e7445e3465/ssl_certificate_e7445e3465.png)
+![two](https://storage.googleapis.com/fergusfrl-blog/ssl_certificate_e7445e3465/ssl_certificate_e7445e3465.png)
 
 Select Create.
 
@@ -66,7 +66,7 @@ For the remaining configuration, I've broken it down into Backend, Host and Path
 1. (optional) Enable logging
 1. Select Create
 
-![image-three](https://storage.googleapis.com/fergusfrl-blog/backend_configuration_3683259462/backend_configuration_3683259462.png)
+![three](https://storage.googleapis.com/fergusfrl-blog/backend_configuration_3683259462/backend_configuration_3683259462.png)
 
 #### Host and Path Rules
 
@@ -81,7 +81,7 @@ No configuration required. I only included this step to avoid any confusion.
 1. Set the Certificates dropdown to the SSL Certificate we provisioned earlier
 1. Select Done
 
-![image-four](https://storage.googleapis.com/fergusfrl-blog/frontend_configuration_734de889f5/frontend_configuration_734de889f5.png)
+![four](https://storage.googleapis.com/fergusfrl-blog/frontend_configuration_734de889f5/frontend_configuration_734de889f5.png)
 
 Finally, select Create. It may take a few minutes but eventually you should see your new load balancer in Network services. Once you the load balancer has finished provisioning, navigate to `https://<your-domain-name>`. SUCCESS 🥳
 
@@ -106,7 +106,7 @@ No configuration required!
 1. Enable HTTPS redirect
 1. Select Save
 
-![image-five](https://storage.googleapis.com/fergusfrl-blog/host_and_path_rules_098bc9e3fc/host_and_path_rules_098bc9e3fc.png)
+![five](https://storage.googleapis.com/fergusfrl-blog/host_and_path_rules_098bc9e3fc/host_and_path_rules_098bc9e3fc.png)
 
 #### Frontend Configuration
 
@@ -116,7 +116,7 @@ No configuration required!
 1. Set the IP address dropdown to the static IP address we provisioned earlier
 1. Select Done
 
-![image-six](https://storage.googleapis.com/fergusfrl-blog/http_frontend_configuration_5e2b16e457/http_frontend_configuration_5e2b16e457.png)
+![six](https://storage.googleapis.com/fergusfrl-blog/http_frontend_configuration_5e2b16e457/http_frontend_configuration_5e2b16e457.png)
 
 Select Create. Now navigate in browser to `http://<my-domain-name>`, you will be redirected to `https://<my-domain-name>` with your Cloud Run application running.
 

@@ -19,13 +19,13 @@ I've used Google Cloud Scheduler to schedule Google Cloud Functions which perfor
 1. Retrieve the currently playing song for the authenticated user from Spotify
 1. Update the Github user status with the currently playing song
 
-![image-one](https://storage.googleapis.com/fergusfrl-blog/Github_Spotify_Live_Status_9064646a9d/Github_Spotify_Live_Status_9064646a9d.png)
+![one](https://storage.googleapis.com/fergusfrl-blog/Github_Spotify_Live_Status_9064646a9d/Github_Spotify_Live_Status_9064646a9d.png)
 
 ### Setting up Spotify Refresh Token Authentication
 
 This is the step which I found most difficult - mostly due the number of options Spotify gives developers to authenticate requests. I highly recommend reading the entire Authorization Guide guide from Spotify prior to starting. The approach which works best for this project is Authorization Code Flow as seen below:
 
-![image-two](https://storage.googleapis.com/fergusfrl-blog/Auth_G_Authoriztion_Code_9c6b4a81dd/Auth_G_Authoriztion_Code_9c6b4a81dd.png)
+![two](https://storage.googleapis.com/fergusfrl-blog/Auth_G_Authoriztion_Code_9c6b4a81dd/Auth_G_Authoriztion_Code_9c6b4a81dd.png)
 
 There's a lot going on in that diagram! But once I got over the initial setup, things become far easier.
 The initial setup includes manually logging in to Spotify to generate an access token. That access token can then be used to generate short lived refresh tokens. In the architectural diagram of this article, it is the refresh tokens we use to authenticate our requests.
@@ -49,7 +49,7 @@ Other developers are clearly surprised too, so much so that a member of the comm
 
 ### Result
 
-![image-three](https://storage.googleapis.com/fergusfrl-blog/github_status_3ab41e5e67/github_status_3ab41e5e67.png)
+![three](https://storage.googleapis.com/fergusfrl-blog/github_status_3ab41e5e67/github_status_3ab41e5e67.png)
 
 I am seriously impressed with how robust Google Cloud Functions are - I haven't had a single failure in over 1 month since deployment. 1 month means approximately 3000 individual invocations which is well within GCP's free tier. I'm looking forward to recreating the project in both AWS and Azure so that I can compare pricing, ease of use and developer experience.
 
