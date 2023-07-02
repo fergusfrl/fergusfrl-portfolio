@@ -1,3 +1,4 @@
 user-agent: *
 disallow:
-sitemap: https://fergusfrl.com/api/sitemap.xml
+
+sitemap: https://fergusfrl.com/api.sitemap.xml
