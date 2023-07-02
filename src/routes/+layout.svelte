@@ -1,9 +1,10 @@
 <script>
 	import { page } from '$app/stores';
+	import { fade } from 'svelte/transition';
 	import '../app.css';
 	import Footer from '../components/Footer.svelte';
 	import Header from '../components/Header.svelte';
-	import { fade } from 'svelte/transition';
+	import shareImg from '$lib/assets/headshot.jpg';
 
 	export let data;
 
@@ -11,8 +12,24 @@
 </script>
 
 <svelte:head>
+	<!-- Title -->
 	<title>{$page.data.seo.title}</title>
+	<meta property="og:title" content={$page.data.seo.title} />
+	<meta name="twitter:title" content={$page.data.seo.title} />
+
+	<!-- Description -->
 	<meta name="description" content={$page.data.seo.description} />
+	<meta property="og:description" content={$page.data.seo.description} />
+	<meta name="twitter:description" content={$page.data.seo.description} />
+
+	<!-- image -->
+	<meta property="og:image" content={shareImg} />
+	<meta name="twitter:image" content={shareImg} />
+
+	<!-- url -->
+	<link rel="canonical" href={$page.url.href} />
+	<meta property="og:url" content={$page.url.href} />
+	<meta name="twitter:url" content={$page.url.href} />
 </svelte:head>
 
 {#key data.url}
