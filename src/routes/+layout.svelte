@@ -33,7 +33,7 @@
 </svelte:head>
 
 {#key data.url}
-	<div class="min-h-screen w-screen border-8 border-slate">
+	<div class="min-h-screen w-full border-8 border-slate">
 		<div class="container mx-auto flex h-full flex-col justify-between px-4 md:px-0">
 			<div>
 				<Header />

@@ -11,13 +11,13 @@
 	things I've learned
 </h1>
 
-<ul class="mt-10 flex flex-wrap gap-4 border-t border-slate-lightest pt-10 md:mt-20 md:pt-20">
+<ul class="my-10 flex flex-wrap gap-4 border-t border-slate-lightest py-10 md:my-20 md:py-20">
 	{#each data.tags as tag}
 		<FilterChip {tag} />
 	{/each}
 </ul>
 
-<ul class="reading-view flex flex-col gap-16 pt-16 md:gap-32 md:pt-32">
+<ul class="reading-view flex flex-col gap-16 md:gap-32">
 	{#each data.articles.filter((article) => {
 		if ($filters.length === 0) return true;
 		return article.tags.some((tag) => $filters.includes(tag));
