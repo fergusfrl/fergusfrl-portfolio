@@ -1,5 +1,6 @@
 <script>
 	import image from '$lib/assets/wedding-longshot.jpeg';
+	import Image from '../components/Image.svelte';
 </script>
 
 <div class="flex flex-col gap-y-10 md:gap-y-20">
@@ -7,7 +8,10 @@
 		Hello, I’m <span class="text-primary">Fergus Farrell</span>. I’m a Software Developer living in
 		Christchurch, NZ.
 	</h1>
-	<img src={image} alt="Fergus Farrell wedding landscape" />
+
+	<Image src={image} alt="Fergus Farrell wedding landscape" />
+	<!-- <img src={image} alt="test" /> -->
+
 	<p class="reading-view leading-loose">
 		I am a full stack web developer with a passion for simple, clean design.
 		<span class="text-primary"> Simplicity is elegance.</span>
