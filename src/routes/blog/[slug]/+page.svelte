@@ -22,7 +22,9 @@
 	</ul>
 	<div class="mb-5 border-b border-slate-lightest pb-4 md:mb-10">
 		<h1 class="text-2xl font-bold md:text-3xl">{data.metadata.title}</h1>
-		<p class="mt-4 text-sm text-slate-light">{data.metadata.publishedDate}</p>
+		<p class="mt-4 text-sm text-slate-light dark:text-slate-lightest">
+			{data.metadata.publishedDate}
+		</p>
 	</div>
 
 	<div class="prose flex flex-col gap-4">

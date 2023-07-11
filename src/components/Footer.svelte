@@ -39,6 +39,8 @@
 		</ul>
 	</FooterSegment>
 	<FooterSegment>
-		<span class="text-sm text-slate-light">Fergus Farrell | {new Date().getFullYear()}</span>
+		<span class="text-sm text-slate-light dark:text-slate-lightest"
+			>Fergus Farrell | {new Date().getFullYear()}</span
+		>
 	</FooterSegment>
 </footer>
