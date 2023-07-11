@@ -43,7 +43,7 @@
 			{/each}
 		</ul>
 	</nav>
-	<button on:click={toggleDarkMode} class=" hover:text-primary">
+	<button on:click={toggleDarkMode} class="hover:text-primary">
 		{#if darkMode}Light{:else}Dark{/if}
 	</button>
 </header>

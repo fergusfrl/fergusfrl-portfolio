@@ -14,7 +14,7 @@
 	</h4>
 	<p class="text-sm text-slate-light dark:text-slate-lightest">{publishedDate}</p>
 	<p class="font-bold">{description}</p>
-	<ul class="flex gap-2">
+	<ul class="flex flex-wrap gap-2">
 		{#each tags.sort((a, b) => (a > b ? 1 : -1)) as tag}
 			<Chip>{tag}</Chip>
 		{/each}
