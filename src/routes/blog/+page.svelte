@@ -1,6 +1,5 @@
 <script>
 	import ArticleCard from '../../components/ArticleCard.svelte';
-	import Chip from '../../components/Chip.svelte';
 	import FilterChip from '../../components/FilterChip.svelte';
 	import { filters } from '../../store/filter';
 
