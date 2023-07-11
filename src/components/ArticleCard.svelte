@@ -16,7 +16,7 @@
 	<p class="font-bold">{description}</p>
 	<ul class="flex flex-wrap gap-2">
 		{#each tags.sort((a, b) => (a > b ? 1 : -1)) as tag}
-			<Chip>{tag}</Chip>
+			<li><Chip>{tag}</Chip></li>
 		{/each}
 	</ul>
 </a>
