@@ -2,12 +2,12 @@
 	export let interactive: boolean = false;
 </script>
 
-<li
+<div
 	class="whitespace-nowrap rounded-full border border-slate px-4 py-2 text-sm dark:border-slate-lightest"
 	class:interactive
 >
 	<slot />
-</li>
+</div>
 
 <style lang="postcss">
 	.interactive {

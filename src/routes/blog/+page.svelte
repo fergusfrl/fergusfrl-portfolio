@@ -31,7 +31,7 @@
 	class:!flex={showFilters}
 >
 	{#each data.tags as tag}
-		<FilterChip {tag} />
+		<li><FilterChip {tag} /></li>
 	{/each}
 </ul>
 
