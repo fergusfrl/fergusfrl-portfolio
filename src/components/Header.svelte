@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import DarkModeToggle from './DarkModeToggle.svelte';
+
 	const links = [
 		{
 			label: 'Home',
@@ -12,7 +14,7 @@
 	];
 </script>
 
-<header class="mb-4 flex justify-start py-8 md:mb-8 md:py-16">
+<header class="mb-4 flex justify-between py-8 md:mb-8 md:py-16">
 	<nav>
 		<ul class="flex gap-4">
 			{#each links as link}
@@ -32,6 +34,7 @@
 			{/each}
 		</ul>
 	</nav>
+	<DarkModeToggle />
 </header>
 
 <style lang="postcss">
