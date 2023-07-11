@@ -1,15 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-
-	let darkMode = true;
-
-	function toggleDarkMode() {
-		darkMode = !darkMode;
-
-		darkMode
-			? document.documentElement.classList.add('dark')
-			: document.documentElement.classList.remove('dark');
-	}
+	import DarkModeToggle from './DarkModeToggle.svelte';
 
 	const links = [
 		{
@@ -43,9 +34,7 @@
 			{/each}
 		</ul>
 	</nav>
-	<button on:click={toggleDarkMode} class="hover:text-primary">
-		{#if darkMode}Light{:else}Dark{/if}
-	</button>
+	<DarkModeToggle />
 </header>
 
 <style lang="postcss">
