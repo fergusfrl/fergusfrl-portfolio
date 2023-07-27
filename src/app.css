@@ -10,32 +10,32 @@
 		@apply mx-auto max-w-3xl;
 	}
 	@font-face {
-		font-family: 'Libre Baskerville';
-		src: local('Libre Baskerville'), local('Libre-Baskerville'), local('libre baskerville'),
-			local('libre-baskerville'), url('/fonts/libre-baskerville/LibreBaskerville-Regular.ttf');
+		font-family: 'Noto Sans Hong Kong';
+		src: local('Noto Sans Hong Kong'), local('Noto-Sans-Hong-Kong'), local('noto sans hong kong'),
+			local('noto-sans-hong-kong'), url('/fonts/noto-sans-hong-kong/NotoSansHK-Regular.otf');
 		font-weight: normal;
 		font-display: swap;
 	}
 	@font-face {
-		font-family: 'Libre Baskerville Bold';
-		src: local('Libre Baskerville Bold'), local('Libre-Baskerville-Bold'),
-			local('libre baskerville bold'), local('libre-baskerville-Bold'),
-			url('/fonts/libre-baskerville/LibreBaskerville-Bold.ttf');
+		font-family: 'Noto Sans Hong Kong Bold';
+		src: local('Noto Sans Hong Kong Bold'), local('Noto-Sans-Hong-Kong-Bold'),
+			local('noto sans hong kong bold'), local('noto-sans-hong-kong-bold'),
+			url('/fonts/noto-sans-hong-kong/NotoSansHK-Bold.otf');
 		font-weight: bold;
 		font-display: swap;
 	}
 	@font-face {
-		font-family: 'Libre Baskerville Italic';
-		src: local('Libre Baskerville Italic'), local('Libre-Baskerville-Italic'),
-			local('libre baskerville italic'), local('libre-baskerville-Italic'),
-			url('/fonts/libre-baskerville/LibreBaskerville-Italic.ttf');
-		font-weight: italic;
+		font-family: 'Noto Sans Hong Kong Black';
+		src: local('Noto Sans Hong Kong Black'), local('Noto-Sans-Hong-Kong-Black'),
+			local('noto sans hong kong black'), local('noto-sans-hong-kong-black'),
+			url('/fonts/noto-sans-hong-kong/NotoSansHK-Black.otf');
+		font-weight: bolder;
 		font-display: swap;
 	}
 
 	/* Article */
 	.prose :is(h1, h2, h3) {
-		@apply mt-4 text-xl font-bold;
+		@apply mb-4 mt-20 font-sans-bold text-3xl;
 	}
 
 	.prose :is(h4, h5, h6) {
