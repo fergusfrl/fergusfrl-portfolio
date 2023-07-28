@@ -1,20 +1,21 @@
 ---
-title: Svelte, Tailwind CSS with Snowpack - the stack of the future
-description: Build lightweight, blazingly fast UI's by bundling Svelte and Tailwind CSS with Snowpack
+title: Svelte, Tailwind CSS with Snowpack - a Modern Development Stack
+description: Build lightweight, blazingly fast UIs by bundling Svelte and Tailwind CSS with Snowpack
+image: svelte.png
 publishedDate: November 21, 2020
 tags:
   - Typescript
   - Svelte
   - Snowpack
   - Tailwind CSS
-snippet: "The Stack of the Future" That's a bold statement. "What's wrong with my current stack?" - You might ask. In the last 5 years of web UI development, it's been common practice to pick one of React, Angular or Vue, choose a CSS library like Bootstrap then bundle it all using Babel or Webpack.
+snippet: Building on the previous blog (see Displaying Strapi Rich Text in Gatsby), we can now consume markdown and render it as HTML. A problem with our markdown rendering that you may have noticed that code blocks are totally uninspiring - light grey background with a black "formatted" type face.
 ---
 
 "The Stack of the Future"
 
 That's a bold statement. "What's wrong with my current stack?" - You might ask.
 
-In the last 5 years of web UI development, it's been common practice to pick one of React, Angular or Vue, choose a CSS library like Bootstrap then bundle it all using Babel or Webpack. As is the way with javascript there are alternatives to these technologies but fundamentally they work using similar practices. This stack is functional - however it does result in _large bundle sizes_ and full rebuilds during development, both of which impact performance.
+In the last 5 years of web UI development, it's been common practice to pick one of React, Angular or Vue, choose a CSS library like Bootstrap then bundle it all using Webpack. As is the way with javascript there are alternatives to these technologies but fundamentally they work using similar practices. This stack is functional - however it does result in _large bundle sizes_ and full rebuilds during development, both of which impact performance.
 
 Svelte, Tailwind CSS and Snowpack (STCS) come together to solve these problems - and coming from a developer - I've been blown away with the speed of changes and the developer experience working in the STCS stack.
 
@@ -30,7 +31,7 @@ On it's surface, Tailwind appears to be just another CSS library like Bootstrap 
 
 #### Snowpack
 
-Snowpack is a bundler like Babel or Webpack. A bundler takes all your files as an input and splits out a single, minified, optimized set of files which we can use to serve content. Snowpack differs from Babel and Webpack because it does not require a full rebuild every time a local file is saved, instead Snowpack only rebuilds the file which has changed. This approach results in the UI updating instantly. I've found Snowpack's instant feedback to be incredible to develop UI's with.
+Snowpack is a bundler like Webpack. A bundler takes all your files as an input and splits out a single, minified, optimized set of files which we can use to serve content. Snowpack differs from Babel and Webpack because it does not require a full rebuild every time a local file is saved, instead Snowpack only rebuilds the file which has changed. This approach results in the UI updating instantly. I've found Snowpack's instant feedback to be incredible to develop UI's with.
 
 ### Getting Started
 

@@ -1,6 +1,7 @@
 ---
 title: Ordering of Aggregate Functions in PostgreSQL
 description: Use PostgreSQL to aggregates arrays
+image: postgresql.png
 publishedDate: June 23, 2021
 tags:
   - SQL

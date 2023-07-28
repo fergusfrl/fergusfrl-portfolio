@@ -1,6 +1,7 @@
 ---
 title: 5 Helpful React Hooks I use Regularly
 description: Useful React Hooks
+image: react.png
 publishedDate: March 23, 2021
 tags:
   - React

@@ -1,6 +1,7 @@
 ---
 title: Upload an Image to Firebase Storage from a URL
 description: Given an image url, upload the image to a Firebase storage bucket using Google Cloud Functions
+image: firebase-storage.png
 publishedDate: October 03, 2020
 tags:
   - Firebase

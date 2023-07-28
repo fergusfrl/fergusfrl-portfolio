@@ -1,6 +1,7 @@
 ---
 title: Run Visual Studio Code in the Cloud
 description: Access your own Visual Studio Code environment anywhere on any device
+image: vs-code.png
 publishedDate: March 02, 2021
 tags:
   - Cloud

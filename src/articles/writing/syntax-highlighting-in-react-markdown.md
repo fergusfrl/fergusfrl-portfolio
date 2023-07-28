@@ -1,6 +1,7 @@
 ---
 title: Syntax Highlighting in React Markdown
 description: A simple guide to display great looking markdown code blocks in react
+image: react.png
 publishedDate: December 02, 2019
 tags:
   - React

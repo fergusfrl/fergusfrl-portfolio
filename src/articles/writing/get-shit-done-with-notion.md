@@ -1,6 +1,7 @@
 ---
 title: Get Shit Done with Notion
 description: Using Notion to manage a prioritized task list
+image: Notion.png
 publishedDate: July 06, 2021
 tags:
   - Notion

@@ -1,6 +1,7 @@
 ---
 title: Strapi on Heroku - Persist Files to Google Cloud Storage
 description: Strapi images disappearing from media library? Learn how to persist files to Google Cloud Storage.
+image: heroku.png
 publishedDate: November 30, 2020
 tags:
   - Cloud

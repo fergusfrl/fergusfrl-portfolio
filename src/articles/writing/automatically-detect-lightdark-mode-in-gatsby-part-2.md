@@ -1,6 +1,7 @@
 ---
 title: Automatically Detect Light/Dark Mode In Gatsby (Part 2)
 description: Using Gatsby to statically bundle our automatic dark mode app
+image: gatsby.png
 publishedDate: October 17, 2019
 tags:
   - React

@@ -1,9 +1,9 @@
-import type { Frontmatter } from '../../types';
+import type { WritingFrontmatter } from '../../types';
 import type { PageLoad } from './$types';
 
 export const load = (async ({ fetch }) => {
 	const response = await fetch(`api/writing`);
-	const writing = (await response.json()) as Frontmatter[];
+	const writing = (await response.json()) as WritingFrontmatter[];
 
 	return {
 		writing,

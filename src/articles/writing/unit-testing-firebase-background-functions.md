@@ -1,6 +1,7 @@
 ---
 title: Unit Testing Firebase Background Functions
 description: Add unit tests to a Firebase project's background functions
+image: firebase.png
 publishedDate: April 20, 2021
 tags:
   - Firebase

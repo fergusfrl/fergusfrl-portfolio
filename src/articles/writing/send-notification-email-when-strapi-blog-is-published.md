@@ -1,6 +1,7 @@
 ---
 title: Send Notification Email When Strapi Blog is Published
 description: Send an email to blog subscribers when new blogs are published using Twilio SendGrid
+image: strapi.png
 publishedDate: October 29, 2020
 tags:
   - Firebase

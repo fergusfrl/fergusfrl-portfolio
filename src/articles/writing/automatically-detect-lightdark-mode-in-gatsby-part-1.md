@@ -1,6 +1,7 @@
 ---
 title: Automatically Detect Light/Dark Mode in Gatsby (Part 1)
 description: Detect system color schemes and apply them to a react app
+image: gatsby.png
 publishedDate: October 15, 2019
 tags:
   - React

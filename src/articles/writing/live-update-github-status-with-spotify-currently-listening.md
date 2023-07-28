@@ -1,6 +1,7 @@
 ---
 title: Live Update Github Status with Spotify Currently Listening
 description: Use the Spoitfy API and Google Cloud Functions to dynamically set your Github profile status
+image: spotify.png
 publishedDate: November 01, 2020
 tags:
   - Firebase

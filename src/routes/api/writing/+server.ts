@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
-import type { Frontmatter } from '../../../types';
+import type { WritingFrontmatter } from '../../../types';
 
 async function getWriting(limit?: number) {
-	let writing: Frontmatter[] = [];
+	let writing: WritingFrontmatter[] = [];
 	const paths = import.meta.glob('/src/articles/writing/*.md', { eager: true });
 
 	for (const path in paths) {
@@ -10,7 +10,7 @@ async function getWriting(limit?: number) {
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
-			const metadata = file.metadata as Frontmatter;
+			const metadata = file.metadata as WritingFrontmatter;
 			const post = { ...metadata, slug };
 			writing.push(post);
 		}

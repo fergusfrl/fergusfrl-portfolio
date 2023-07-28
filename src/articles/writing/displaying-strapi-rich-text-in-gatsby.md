@@ -1,12 +1,13 @@
 ---
 title: Displaying Strapi Rich Text in Gatsby
 description: Supplying rich text from the Strapi CMS and displaying it in Gatsby
+image: strapi.png
 publishedDate: November 10, 2019
 tags:
   - React
   - Gatsby
   - Strapi
-  snippet: As of Strapi v3@alpha.12, we were introduced to the rich text content type field, or What You See Is What You Get (WYSIWYG). This is a helpful feature letting us make use of bolding and italics and we could now embed code snippets, images, links and more.
+snippet: As of Strapi v3@alpha.12, we were introduced to the rich text content type field, or What You See Is What You Get (WYSIWYG). This is a helpful feature letting us make use of bolding and italics and we could now embed code snippets, images, links and more.
 ---
 
 As of Strapi v3@alpha.12, we were introduced to the rich text content type field, or What You See Is What You Get (WYSIWYG). This is a helpful feature letting us make use of bolding and italics and we could now embed code snippets, images, links and more.

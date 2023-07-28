@@ -2,6 +2,7 @@
 title: Add a Custom Domain to Cloud Run
 description: Add an HTTPS load balancer to a Cloud Run Instance with a Custom SSL Certified Domain Name
 publishedDate: May 16, 2021
+image: cloud-run.png
 tags:
   - Cloud
   - Google Cloud Platform

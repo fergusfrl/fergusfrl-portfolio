@@ -21,24 +21,21 @@
 	<Breadcrumbs
 		breadcrumbs={[
 			{ label: 'Fergus Farrell', href: '/' },
-			{ label: 'Writing', href: '/writing' }
+			{ label: 'Work', href: '/work' }
 		]}
 	/>
-	<h1 class="pb-12 font-sans-black text-[5rem]">{data.metadata.title}</h1>
-	<p>{data.metadata.publishedDate}</p>
+	<h1 class="font-sans-black text-[5rem]">{data.metadata.title}</h1>
+	<p>{`${data.metadata.startDate} to ${data.metadata.finishDate}`}</p>
+	<img src={`/images/${data.metadata.image}`} alt={data.metadata.title} class="rounded-sm" />
 	<article class="prose flex max-w-4xl flex-col gap-4 pb-24 font-sans text-lg leading-8">
 		<svelte:component this={data.content} />
 	</article>
 
-	<Collection title="More Writing" href="/writing" includeLinkButton={false}>
-		<ul class="flex justify-between gap-8">
-			{#each data.writing as writing}
-				<li class="flex-1">
-					<PreviewCard
-						label={writing.title}
-						href={`/writing/${writing.slug}`}
-						image={writing.image}
-					/>
+	<Collection title="More Work" href="/work" includeLinkButton={false}>
+		<ul class="grid grid-cols-4 gap-8">
+			{#each data.work as work}
+				<li>
+					<PreviewCard label={work.title} href={`/work/${work.slug}`} image={work.image} />
 				</li>
 			{/each}
 		</ul>

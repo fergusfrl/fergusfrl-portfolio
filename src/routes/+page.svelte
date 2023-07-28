@@ -29,11 +29,11 @@
 	</section>
 
 	<div class="flex flex-col gap-28 pt-28">
-		<Collection title="Work" href="/writing">
+		<Collection title="Work" href="/work">
 			<ul class="flex justify-between gap-8">
 				{#each data.work as work}
 					<li class="flex-1">
-						<PreviewCard href={`/writing/${work.slug}`} label={work.title} />
+						<PreviewCard href={`/work/${work.slug}`} label={work.title} image={work.image} />
 					</li>
 				{/each}
 			</ul>
@@ -47,6 +47,7 @@
 							href={`/writing/${writing.slug}`}
 							label={writing.title}
 							snippet={writing.snippet}
+							image={writing.image}
 						/>
 					</li>
 				{/each}
