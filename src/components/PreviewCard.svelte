@@ -12,7 +12,7 @@
 		<img src={`/images/${image}`} alt="label" class="rounded-sm" />
 	</a>
 	<a {href} class="transition-opacity hover:opacity-70"
-		><h4 class="pt-4 font-sans-bold text-xl font-thin @sm:text-2xl">{label}</h4>
+		><h4 class="font-sans-bold text-xl font-thin @sm:text-2xl">{label}</h4>
 	</a>
 	<div class="hidden space-y-4 @sm:block">
 		{#if snippet}

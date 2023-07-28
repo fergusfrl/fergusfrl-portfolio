@@ -26,7 +26,11 @@
 	/>
 	<h1 class="font-sans-black text-[5rem]">{data.metadata.title}</h1>
 	<p>{`${data.metadata.startDate} to ${data.metadata.finishDate}`}</p>
-	<img src={`/images/${data.metadata.image}`} alt={data.metadata.title} class="rounded-sm" />
+	<img
+		src={`/images/${data.metadata.image}`}
+		alt={data.metadata.title}
+		class="max-w-4xl rounded-sm"
+	/>
 	<article class="prose flex max-w-4xl flex-col gap-4 pb-24 font-sans text-lg leading-8">
 		<svelte:component this={data.content} />
 	</article>
