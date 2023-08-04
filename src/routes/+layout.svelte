@@ -28,7 +28,9 @@
 	<meta name="twitter:url" content={$page.url.href} />
 </svelte:head>
 
-<div class="mx-auto flex flex-col justify-between bg-eggshell px-4 py-32 font-sans md:px-60">
+<div
+	class="mx-auto flex flex-col justify-between bg-eggshell px-4 py-32 font-sans sm:px-12 lg:px-60"
+>
 	<slot />
 	<Footer />
 </div>

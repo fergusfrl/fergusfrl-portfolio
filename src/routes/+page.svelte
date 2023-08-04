@@ -6,9 +6,9 @@
 	export let data;
 </script>
 
-<div class="flex flex-col gap-12 pt-24">
+<div class="flex flex-col gap-12 pt-8 md:pt-24">
 	<section>
-		<h1 class="pb-12 font-sans-black text-[5rem]">Fergus Farrell</h1>
+		<h1 class="pb-12 font-sans-black text-[4rem] md:text-[5rem]">Fergus Farrell</h1>
 		<p class="max-w-3xl text-lg leading-8">
 			Freelance web developer — <Link
 				href="mailto:fergusfrl@gmail.com?subject=Work Availability Enquiry&body=Please include as much of the following information as you have available:%0D%0A
@@ -30,9 +30,9 @@
 
 	<div class="flex flex-col gap-28 pt-28">
 		<Collection title="Work" href="/work">
-			<ul class="flex justify-between gap-8">
+			<ul class="flex flex-wrap justify-between gap-8">
 				{#each data.work as work}
-					<li class="flex-1">
+					<li class="block flex-1 last:md:hidden last:lg:block">
 						<PreviewCard href={`/work/${work.slug}`} label={work.title} image={work.image} />
 					</li>
 				{/each}
@@ -40,9 +40,9 @@
 		</Collection>
 
 		<Collection title="Writing" href="/writing">
-			<ul class="grid grid-cols-4 gap-8">
+			<ul class="flex flex-wrap justify-between gap-8 lg:grid lg:grid-cols-4">
 				{#each data.writing as writing}
-					<li class="first:col-span-2 first:row-span-2">
+					<li class="flex-1 first:col-span-2 first:row-span-2 last:hidden last:lg:block">
 						<PreviewCard
 							href={`/writing/${writing.slug}`}
 							label={writing.title}

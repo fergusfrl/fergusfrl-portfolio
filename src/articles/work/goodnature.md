@@ -4,6 +4,7 @@ company: Goodnature
 image: goodnature.png
 startDate: May, 2023
 finishDate: August, 2023
+link: https://goodnature.co.nz/
 ---
 
 Goodnature sell smart rodent trapping products and solutions. They have the goal of a predator free New Zealand by 2050.

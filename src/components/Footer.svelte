@@ -40,7 +40,7 @@
 	<ul class="flex gap-4">
 		{#each indexPages as indexPage}
 			<li>
-				<Link href={indexPage.link}>{indexPage.label}</Link>
+				<Link href={indexPage.link} target="_self">{indexPage.label}</Link>
 			</li>
 		{/each}
 	</ul>

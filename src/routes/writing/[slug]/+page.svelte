@@ -36,7 +36,7 @@
 	</article>
 
 	<Collection title="More Writing" href="/writing" includeLinkButton={false}>
-		<ul class="flex justify-between gap-8">
+		<ul class="flex grid-cols-4 flex-wrap gap-8 md:grid">
 			{#each data.writing as writing}
 				<li class="flex-1">
 					<PreviewCard

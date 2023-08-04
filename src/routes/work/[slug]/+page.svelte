@@ -3,6 +3,7 @@
 	import Breadcrumbs from '../../../components/Breadcrumbs.svelte';
 	import Collection from '../../../components/Collection.svelte';
 	import CopyButton from '../../../components/CopyButton.svelte';
+	import LinkButton from '../../../components/LinkButton.svelte';
 	import PreviewCard from '../../../components/PreviewCard.svelte';
 
 	export let data;
@@ -33,10 +34,12 @@
 	/>
 	<article class="prose flex max-w-4xl flex-col gap-4 pb-24 font-sans text-lg leading-8">
 		<svelte:component this={data.content} />
+		<br />
+		<LinkButton label="View Project" href={data.metadata.link} target="_blank" />
 	</article>
 
 	<Collection title="More Work" href="/work" includeLinkButton={false}>
-		<ul class="grid grid-cols-4 gap-8">
+		<ul class="flex grid-cols-4 flex-wrap gap-8 md:grid">
 			{#each data.work as work}
 				<li>
 					<PreviewCard label={work.title} href={`/work/${work.slug}`} image={work.image} />

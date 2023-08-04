@@ -15,4 +15,5 @@ export type WorkFrontmatter = {
 	startDate: string;
 	finishDate: string;
 	slug: string;
+	link: string;
 };
