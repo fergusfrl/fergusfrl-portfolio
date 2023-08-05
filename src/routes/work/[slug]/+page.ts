@@ -4,7 +4,7 @@ import type { WorkFrontmatter } from '../../../types/index.js';
 export async function load({ params, fetch }) {
 	try {
 		const post = await import(`../../../articles/work/${params.slug}.md`);
-		const workResponse = await fetch(`../../api/work?limit=8`);
+		const workResponse = await fetch(`../../api/work?limit=4`);
 		const work = (await workResponse.json()) as WorkFrontmatter[];
 
 		return {
