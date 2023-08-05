@@ -13,7 +13,8 @@ export async function load({ params, fetch }) {
 			writing,
 			seo: {
 				title: `${post.metadata.title} | Fergus Farrell`,
-				description: post.metadata.description
+				description: post.metadata.description,
+				image: `/images/${post.metadata.image}`
 			}
 		};
 	} catch (e) {

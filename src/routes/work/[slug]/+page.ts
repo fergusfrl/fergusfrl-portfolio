@@ -12,7 +12,8 @@ export async function load({ params, fetch }) {
 			metadata: { ...post.metadata, slug: params.slug } as WorkFrontmatter,
 			work,
 			seo: {
-				title: `${post.metadata.title} | Fergus Farrell`
+				title: `${post.metadata.title} | Fergus Farrell`,
+				image: `/images/${post.metadata.image}`
 			}
 		};
 	} catch (e) {

@@ -4,23 +4,28 @@
 	import '../app.css';
 
 	import Footer from '../components/Footer.svelte';
-	import shareImg from '$lib/assets/headshot.jpg';
 </script>
 
 <svelte:head>
 	<!-- Title -->
-	<title>{$page.data.seo.title}</title>
-	<meta property="og:title" content={$page.data.seo.title} />
-	<meta name="twitter:title" content={$page.data.seo.title} />
+	{#if $page.data.seo.title}
+		<title>{$page.data.seo.title}</title>
+		<meta property="og:title" content={$page.data.seo.title} />
+		<meta name="twitter:title" content={$page.data.seo.title} />
+	{/if}
 
 	<!-- Description -->
-	<meta name="description" content={$page.data.seo.description} />
-	<meta property="og:description" content={$page.data.seo.description} />
-	<meta name="twitter:description" content={$page.data.seo.description} />
+	{#if $page.data.seo.description}
+		<meta name="description" content={$page.data.seo.description} />
+		<meta property="og:description" content={$page.data.seo.description} />
+		<meta name="twitter:description" content={$page.data.seo.description} />
+	{/if}
 
 	<!-- image -->
-	<meta property="og:image" content={shareImg} />
-	<meta name="twitter:image" content={shareImg} />
+	{#if $page.data.seo.image}
+		<meta property="og:image" content={$page.data.seo.image} />
+		<meta name="twitter:image" content={$page.data.seo.image} />
+	{/if}
 
 	<!-- url -->
 	<link rel="canonical" href={$page.url.href} />
@@ -29,7 +34,7 @@
 </svelte:head>
 
 <div
-	class="mx-auto flex flex-col justify-between bg-eggshell px-4 py-32 font-sans sm:px-12 lg:px-60"
+	class="mx-auto flex flex-col justify-between bg-eggshell px-4 py-32 font-sans md:px-12 lg:px-60"
 >
 	<slot />
 	<Footer />
