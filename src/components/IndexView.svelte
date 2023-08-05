@@ -1,11 +1,12 @@
 <script lang="ts">
+	import type { Breadcrumb } from '../types';
 	import Breadcrumbs from './Breadcrumbs.svelte';
 	import PreviewCard from './PreviewCard.svelte';
 
 	export let title: string;
 	export let base: string;
 	export let listItems: { slug: string; title: string; image: string }[];
-	export let breadcrumbs: { label: string; href: string }[];
+	export let breadcrumbs: Breadcrumb[];
 </script>
 
 <div class="flex flex-col gap-12 pt-6">

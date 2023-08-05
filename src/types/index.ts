@@ -17,3 +17,5 @@ export type WorkFrontmatter = {
 	slug: string;
 	link: string;
 };
+
+export type Breadcrumb = { label: string; href: string };

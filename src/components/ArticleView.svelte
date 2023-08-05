@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import type { WorkFrontmatter, WritingFrontmatter } from '../types';
+	import type { Breadcrumb, WorkFrontmatter, WritingFrontmatter } from '../types';
 	import Breadcrumbs from './Breadcrumbs.svelte';
 	import Collection from './Collection.svelte';
 	import CopyButton from './CopyButton.svelte';
 	import LinkButton from './LinkButton.svelte';
 	import PreviewCard from './PreviewCard.svelte';
 
-	export let breadcrumbs: { label: string; href: string }[];
+	export let breadcrumbs: Breadcrumb[];
 	export let title: string;
 	export let subtitle: string;
 	export let imageSrc: string;

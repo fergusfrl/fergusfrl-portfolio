@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let breadcrumbs: { label: string; href: string }[];
+	import type { Breadcrumb } from '../types';
+
+	export let breadcrumbs: Breadcrumb[];
 </script>
 
 <ul class="flex gap-8 text-lg">
