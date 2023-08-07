@@ -13,7 +13,10 @@
 	export let imageSrc: string;
 	export let content: any;
 	export let link: string | undefined = undefined;
-	export let base: string;
+	export let base: {
+		title: string;
+		href: string;
+	};
 	export let listItems: (WritingFrontmatter | WorkFrontmatter)[];
 
 	afterNavigate(() => {
@@ -39,7 +42,7 @@
 		{/if}
 	</article>
 
-	<Collection title={`More ${title}`} href={base} includeLinkButton={false}>
+	<Collection title={`More ${base.title}`} href={base.href} includeLinkButton={false}>
 		<ul class="flex grid-cols-4 flex-wrap justify-between gap-8 md:grid">
 			{#each listItems as item}
 				<li class="flex-1">

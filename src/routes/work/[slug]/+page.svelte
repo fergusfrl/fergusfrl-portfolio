@@ -8,7 +8,7 @@
 	subtitle={`${data.metadata.startDate} to ${data.metadata.finishDate}`}
 	imageSrc={`/images/${data.metadata.image}`}
 	link={data.metadata.link}
-	base="/work"
+	base={{ href: '/work', title: 'Work' }}
 	listItems={data.work}
 	content={data.content}
 	breadcrumbs={[

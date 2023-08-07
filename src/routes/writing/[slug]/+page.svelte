@@ -5,7 +5,7 @@
 
 <ArticleView
 	title={data.metadata.title}
-	base="/writing"
+	base={{ href: '/writing', title: 'Writing' }}
 	content={data.content}
 	imageSrc={`/images/${data.metadata.image}`}
 	listItems={data.writing}
