@@ -46,7 +46,7 @@
 		<ul class="flex grid-cols-4 flex-wrap justify-between gap-8 md:grid">
 			{#each listItems as item}
 				<li class="flex-1">
-					<PreviewCard label={item.title} href={`${base}/${item.slug}`} image={item.image} />
+					<PreviewCard label={item.title} href={`${base.href}/${item.slug}`} image={item.image} />
 				</li>
 			{/each}
 		</ul>
