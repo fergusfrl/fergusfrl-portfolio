@@ -5,7 +5,7 @@ function generateArticleSitemap() {
 	for (const path in paths) {
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 		urls += `<url>
-            <loc>https://fergusfrl.com/blog/${slug}/</loc>
+            <loc>https://fergusfrl.com/writing/${slug}/</loc>
             <changefreq>monthly</changefreq>
             <priority>0.8</priority>
         </url>`;
@@ -32,7 +32,7 @@ export async function GET() {
                 <priority>1</priority>
             </url>
             <url>
-                <loc>https://fergusfrl.com/blog/</loc>
+                <loc>https://fergusfrl.com/writing/</loc>
                 <changefreq>monthly</changefreq>
                 <priority>0.9</priority>
             </url>

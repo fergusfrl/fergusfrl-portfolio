@@ -8,7 +8,7 @@
 	export let slug: string;
 </script>
 
-<a href={`/blog/${slug}`} class="group flex flex-col gap-2 md:gap-4">
+<a href={`/writing/${slug}`} class="group flex flex-col gap-2 md:gap-4">
 	<h4 class="text-xl font-bold text-primary underline group-hover:no-underline md:text-2xl">
 		{title}
 	</h4>

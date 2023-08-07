@@ -13,15 +13,20 @@ export default {
 				slate: {
 					lightest: '#D3D3D3',
 					light: '#6D6D6D',
-					DEFAULT: '#494C4E'
+					DEFAULT: '#222222'
+				},
+				eggshell: {
+					DEFAULT: '#F9F9F9'
 				}
 			}
 		},
 		fontFamily: {
-			sans: ['Libre Baskerville', ...defaultTheme.fontFamily.sans],
+			sans: ['Noto Sans Hong Kong', ...defaultTheme.fontFamily.sans],
+			'sans-bold': ['Noto Sans Hong Kong Bold', ...defaultTheme.fontFamily.sans],
+			'sans-black': ['Noto Sans Hong Kong Black', ...defaultTheme.fontFamily.sans],
 			serif: [...defaultTheme.fontFamily.serif],
 			mono: [...defaultTheme.fontFamily.mono]
 		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/container-queries')]
 };
