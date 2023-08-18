@@ -22,8 +22,6 @@ export default {
 		},
 		fontFamily: {
 			sans: ['Noto Sans Hong Kong', ...defaultTheme.fontFamily.sans],
-			'sans-bold': ['Noto Sans Hong Kong Bold', ...defaultTheme.fontFamily.sans],
-			'sans-black': ['Noto Sans Hong Kong Black', ...defaultTheme.fontFamily.sans],
 			serif: [...defaultTheme.fontFamily.serif],
 			mono: [...defaultTheme.fontFamily.mono]
 		}

@@ -12,30 +12,30 @@
 	@font-face {
 		font-family: 'Noto Sans Hong Kong';
 		src: local('Noto Sans Hong Kong'), local('Noto-Sans-Hong-Kong'), local('noto sans hong kong'),
-			local('noto-sans-hong-kong'), url('/fonts/noto-sans-hong-kong/NotoSansHK-Regular.otf');
+			local('noto-sans-hong-kong'), url('/NotoSansHK-Regular.otf');
 		font-weight: normal;
 		font-display: swap;
 	}
 	@font-face {
-		font-family: 'Noto Sans Hong Kong Bold';
+		font-family: 'Noto Sans Hong Kong';
 		src: local('Noto Sans Hong Kong Bold'), local('Noto-Sans-Hong-Kong-Bold'),
 			local('noto sans hong kong bold'), local('noto-sans-hong-kong-bold'),
-			url('/fonts/noto-sans-hong-kong/NotoSansHK-Bold.otf');
+			url('/NotoSansHK-Bold.otf');
 		font-weight: bold;
 		font-display: swap;
 	}
 	@font-face {
-		font-family: 'Noto Sans Hong Kong Black';
+		font-family: 'Noto Sans Hong Kong';
 		src: local('Noto Sans Hong Kong Black'), local('Noto-Sans-Hong-Kong-Black'),
 			local('noto sans hong kong black'), local('noto-sans-hong-kong-black'),
-			url('/fonts/noto-sans-hong-kong/NotoSansHK-Black.otf');
-		font-weight: bolder;
+			url('/NotoSansHK-Black.otf');
+		font-weight: 900;
 		font-display: swap;
 	}
 
 	/* Article */
 	.prose :is(h1, h2, h3) {
-		@apply mb-4 mt-20 font-sans-bold text-3xl;
+		@apply mb-4 mt-20 text-3xl font-bold;
 	}
 
 	.prose :is(h4, h5, h6) {
