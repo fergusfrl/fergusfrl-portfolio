@@ -11,7 +11,7 @@
 
 <div class="flex flex-col gap-12 pt-6">
 	<Breadcrumbs {breadcrumbs} />
-	<h1 class="pb-12 font-sans-black text-[3rem] md:text-[5rem]">{title}</h1>
+	<h1 class="pb-12 font-sans text-[3rem] font-bold md:text-[5rem]">{title}</h1>
 	<ul class="flex grid-cols-4 flex-wrap justify-between gap-4 md:grid">
 		{#each listItems as item}
 			<li class="flex-1">

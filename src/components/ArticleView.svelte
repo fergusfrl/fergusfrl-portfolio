@@ -31,22 +31,24 @@
 
 <div class="flex flex-col gap-12 pt-6">
 	<Breadcrumbs {breadcrumbs} />
-	<h1 class="font-sans-black text-[3rem] md:text-[5rem]">{title}</h1>
-	<p>{subtitle}</p>
-	<img src={imageSrc} alt={title} class="max-w-4xl rounded-sm" />
-	<article class="prose flex max-w-4xl flex-col gap-4 pb-24 font-sans text-lg leading-8">
-		<svelte:component this={content} />
-		{#if link}
-			<br />
-			<LinkButton label="View Project" href={link} target="_blank" />
-		{/if}
-	</article>
+	<div class="flex max-w-4xl flex-col gap-12">
+		<h1 class="font-sans text-[3rem] font-bold md:text-[5rem]">{title}</h1>
+		<p>{subtitle}</p>
+		<img src={imageSrc} alt={title} class="rounded-sm" />
+		<article class="prose flex flex-col gap-4 pb-24 font-sans text-lg leading-8">
+			<svelte:component this={content} />
+			{#if link}
+				<br />
+				<LinkButton label="View Project" href={link} target="_blank" />
+			{/if}
+		</article>
+	</div>
 
 	<Collection title={`More ${base.title}`} href={base.href} includeLinkButton={false}>
 		<ul class="flex grid-cols-4 flex-wrap justify-between gap-8 md:grid">
 			{#each listItems as item}
 				<li class="flex-1">
-					<PreviewCard label={item.title} href={`${base}/${item.slug}`} image={item.image} />
+					<PreviewCard label={item.title} href={`${base.href}/${item.slug}`} image={item.image} />
 				</li>
 			{/each}
 		</ul>

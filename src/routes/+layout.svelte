@@ -4,27 +4,31 @@
 	import '../app.css';
 
 	import Footer from '../components/Footer.svelte';
+
+	const title: string | undefined = $page?.data?.seo?.title;
+	const description: string | undefined = $page?.data?.seo?.description;
+	const image: string | undefined = $page?.data?.seo?.image;
 </script>
 
 <svelte:head>
 	<!-- Title -->
-	{#if $page.data.seo.title}
-		<title>{$page.data.seo.title}</title>
-		<meta property="og:title" content={$page.data.seo.title} />
-		<meta name="twitter:title" content={$page.data.seo.title} />
+	{#if title}
+		<title>{title}</title>
+		<meta property="og:title" content={title} />
+		<meta name="twitter:title" content={title} />
 	{/if}
 
 	<!-- Description -->
-	{#if $page.data.seo.description}
-		<meta name="description" content={$page.data.seo.description} />
-		<meta property="og:description" content={$page.data.seo.description} />
-		<meta name="twitter:description" content={$page.data.seo.description} />
+	{#if description}
+		<meta name="description" content={description} />
+		<meta property="og:description" content={description} />
+		<meta name="twitter:description" content={description} />
 	{/if}
 
 	<!-- image -->
-	{#if $page.data.seo.image}
-		<meta property="og:image" content={$page.data.seo.image} />
-		<meta name="twitter:image" content={$page.data.seo.image} />
+	{#if image}
+		<meta property="og:image" content={image} />
+		<meta name="twitter:image" content={image} />
 	{/if}
 
 	<!-- url -->

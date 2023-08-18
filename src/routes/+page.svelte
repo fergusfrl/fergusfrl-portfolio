@@ -8,8 +8,8 @@
 
 <div class="flex flex-col gap-12 pt-8 md:pt-24">
 	<section>
-		<h1 class="pb-12 font-sans-black text-[4rem] md:text-[5rem]">Fergus Farrell</h1>
-		<p class="max-w-3xl text-lg leading-8">
+		<h1 class="pb-12 text-[4rem] font-bold tracking-wide md:text-[5rem]">Fergus Farrell</h1>
+		<p class="max-w-3xl text-xl leading-8">
 			Freelance web developer — <Link
 				href="mailto:fergusfrl@gmail.com?subject=Work Availability Enquiry&body=Please include as much of the following information as you have available:%0D%0A
 				1. Brief description of your project and its objectives.%0D%0A
