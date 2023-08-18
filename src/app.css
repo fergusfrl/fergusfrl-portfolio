@@ -9,12 +9,41 @@
 	.reading-view {
 		@apply mx-auto max-w-3xl;
 	}
+
+	@font-face {
+		font-family: 'Noto Sans Hong Kong';
+		src: local('Noto Sans Hong Kong Thin'), local('Noto-Sans-Hong-Kong-Thin'),
+			local('noto sans hong kong thin'), local('noto-sans-hong-kong-thin'),
+			url('/NotoSansHK-Thin.otf');
+		font-weight: 100;
+		font-display: swap;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Noto Sans Hong Kong';
+		src: local('Noto Sans Hong Kong Light'), local('Noto-Sans-Hong-Kong-Light'),
+			local('noto sans hong kong light'), local('noto-sans-hong-kong-light'),
+			url('/NotoSansHK-Light.otf');
+		font-weight: 300;
+		font-display: swap;
+		font-style: normal;
+	}
 	@font-face {
 		font-family: 'Noto Sans Hong Kong';
 		src: local('Noto Sans Hong Kong'), local('Noto-Sans-Hong-Kong'), local('noto sans hong kong'),
 			local('noto-sans-hong-kong'), url('/NotoSansHK-Regular.otf');
 		font-weight: normal;
 		font-display: swap;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Noto Sans Hong Kong';
+		src: local('Noto Sans Hong Kong Medium'), local('Noto-Sans-Hong-Kong-Medium'),
+			local('noto sans hong kong medium'), local('noto-sans-hong-kong-medium'),
+			url('/NotoSansHK-Medium.otf');
+		font-weight: 500;
+		font-display: swap;
+		font-style: normal;
 	}
 	@font-face {
 		font-family: 'Noto Sans Hong Kong';
@@ -23,6 +52,7 @@
 			url('/NotoSansHK-Bold.otf');
 		font-weight: bold;
 		font-display: swap;
+		font-style: normal;
 	}
 	@font-face {
 		font-family: 'Noto Sans Hong Kong';
@@ -31,6 +61,7 @@
 			url('/NotoSansHK-Black.otf');
 		font-weight: 900;
 		font-display: swap;
+		font-style: normal;
 	}
 
 	/* Article */
