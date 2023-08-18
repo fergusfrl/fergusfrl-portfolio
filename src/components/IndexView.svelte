@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Breadcrumb } from '../types';
 	import Breadcrumbs from './Breadcrumbs.svelte';
-	import PreviewCard from './PreviewCard.svelte';
+	import ArticleCard from './ArticleCard.svelte';
 
 	export let title: string;
 	export let base: string;
@@ -15,7 +15,7 @@
 	<ul class="flex grid-cols-4 flex-wrap justify-between gap-4 md:grid">
 		{#each listItems as item}
 			<li class="flex-1">
-				<PreviewCard href={`${base}/${item.slug}`} label={item.title} image={item.image} />
+				<ArticleCard href={`${base}/${item.slug}`} label={item.title} image={item.image} />
 			</li>
 		{/each}
 	</ul>

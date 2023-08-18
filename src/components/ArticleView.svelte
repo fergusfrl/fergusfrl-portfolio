@@ -5,7 +5,7 @@
 	import Collection from './Collection.svelte';
 	import CopyButton from './CopyButton.svelte';
 	import LinkButton from './LinkButton.svelte';
-	import PreviewCard from './PreviewCard.svelte';
+	import ArticleCard from './ArticleCard.svelte';
 
 	export let breadcrumbs: Breadcrumb[];
 	export let title: string;
@@ -48,7 +48,7 @@
 		<ul class="flex grid-cols-4 flex-wrap justify-between gap-8 md:grid">
 			{#each listItems as item}
 				<li class="flex-1">
-					<PreviewCard label={item.title} href={`${base.href}/${item.slug}`} image={item.image} />
+					<ArticleCard label={item.title} href={`${base.href}/${item.slug}`} image={item.image} />
 				</li>
 			{/each}
 		</ul>

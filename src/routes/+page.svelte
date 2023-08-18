@@ -1,7 +1,7 @@
 <script>
 	import Collection from '../components/Collection.svelte';
 	import Link from '../components/Link.svelte';
-	import PreviewCard from '../components/PreviewCard.svelte';
+	import ArticleCard from '../components/ArticleCard.svelte';
 
 	export let data;
 </script>
@@ -33,7 +33,7 @@
 			<ul class="flex flex-wrap justify-between gap-8">
 				{#each data.work as work}
 					<li class="block flex-1 last:md:hidden last:lg:block">
-						<PreviewCard href={`/work/${work.slug}`} label={work.title} image={work.image} />
+						<ArticleCard href={`/work/${work.slug}`} label={work.title} image={work.image} />
 					</li>
 				{/each}
 			</ul>
@@ -43,7 +43,7 @@
 			<ul class="flex flex-wrap justify-between gap-8 lg:grid lg:grid-cols-4">
 				{#each data.writing as writing}
 					<li class="flex-1 first:col-span-2 first:row-span-2 last:hidden last:lg:block">
-						<PreviewCard
+						<ArticleCard
 							href={`/writing/${writing.slug}`}
 							label={writing.title}
 							snippet={writing.snippet}

@@ -1,22 +1,25 @@
 <script lang="ts">
-	import Chip from './Chip.svelte';
+	import LinkButton from './LinkButton.svelte';
 
-	export let title: string;
-	export let description: string;
-	export let publishedDate: string;
-	export let tags: string[];
-	export let slug: string;
+	export let href: string;
+	export let label: string;
+	export let image: string | undefined = undefined;
+	export let snippet: string | undefined = undefined;
 </script>
 
-<a href={`/writing/${slug}`} class="group flex flex-col gap-2 md:gap-4">
-	<h4 class="text-xl font-bold text-primary underline group-hover:no-underline md:text-2xl">
-		{title}
-	</h4>
-	<p class="text-sm text-slate-light dark:text-slate-lightest">{publishedDate}</p>
-	<p class="font-bold">{description}</p>
-	<ul class="flex flex-wrap gap-2">
-		{#each tags.sort((a, b) => (a > b ? 1 : -1)) as tag}
-			<li><Chip>{tag}</Chip></li>
-		{/each}
-	</ul>
-</a>
+<div class="flex min-w-[150px] flex-col gap-4 @container">
+	<a {href} class="transition-opacity hover:opacity-70">
+		<img src={`/images/${image}`} alt="label" class="rounded-sm" />
+	</a>
+	<a {href} class="transition-opacity hover:opacity-70"
+		><h4 class="text-lg font-bold @sm:text-2xl md:text-xl">{label}</h4>
+	</a>
+	<div class="hidden space-y-4 @sm:block">
+		{#if snippet}
+			<p class="leading-8">
+				{snippet}
+			</p>
+		{/if}
+		<LinkButton {href} label="Continue Reading" />
+	</div>
+</div>
