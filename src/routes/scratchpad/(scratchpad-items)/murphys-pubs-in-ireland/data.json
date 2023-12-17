@@ -1,0 +1,162 @@
+[
+    {
+        "title": "Murphys Bar",
+        "address": "9 High St, Galway, H91 KW97",
+        "coordinates": {
+            "lat": 53.38955153835162,
+            "lng": -9.02271182557418
+        }
+    },
+    {
+        "title": "Murphy's Bar",
+        "address": "Kilbeg, Kilbeg Pier, Co. Galway",
+        "coordinates": {
+            "lat": 53.572121848498064,
+            "lng": -9.136747417529968
+        }
+    },
+    {
+        "title": "Jack Murphy's Bar",
+        "address": "Kilmaine, Co. Mayo",
+        "coordinates": {
+            "lat": 53.75540061252597,
+            "lng": -9.094189359661666
+        }
+    },
+    {
+        "title": "Murphy's",
+        "address": "Lahardaun, Moate, Co. Mayo",
+        "coordinates": {
+            "lat": 54.18528547520305,
+            "lng": -9.295285730362307
+        }
+    },
+    {
+        "title": "Murphy's Bar",
+        "address": "8 Parnell St, Prior's-Land, Limerick, V94 F6W6",
+        "coordinates": {
+            "lat": 52.78205979230616,
+            "lng": -8.54856108627824
+        }
+    },
+    {
+        "title": "Murphy's Pub",
+        "address": "Murphy's Pub, Rathnamuddagh, Co. Westmeath, N91 E132",
+        "coordinates": {
+            "lat": 53.58309552773048,
+            "lng": -7.437834859357333
+        }
+    },
+    {
+        "title": "Murphys Pub Templemore",
+        "address": "Main St, Kiltillane, Templemore, Co. Tipperary",
+        "coordinates": {
+            "lat": 52.93824309043834,
+            "lng": -7.787592740434103
+        }
+    },
+    {
+        "title": "Murphys Bar Kilkee",
+        "address": "Market Square, Kilkee, Co. Clare",
+        "coordinates": {
+            "lat": 52.84390962764873,
+            "lng": -9.619805164064548
+        }
+    },
+    {
+        "title": "Murphys Bar, Restaurant & Townhouse Killarney",
+        "address": "18 College St, Killarney, Co. Kerry, V93 EFP1",
+        "coordinates": {
+            "lat": 52.18099584479564,
+            "lng": -9.538548574085935
+        }
+    },
+    {
+        "title": "Murphy's Bar Brandon",
+        "address": "Lisnakealwee, Brandon, Co. Kerry, V92 T680",
+        "coordinates": {
+            "lat": 52.445275173455315,
+            "lng": -10.13406800094667
+        }
+    },
+    {
+        "title": "Murphys Bar Abbeyfeale",
+        "address": "West, Abbeyfeale, Co. Limerick",
+        "coordinates": {
+            "lat": 52.52171284515728,
+            "lng": -9.28924556054101
+        }
+    },
+    {
+        "title": "Murphy's Bar",
+        "address": "Tooreennagrena, Rockchapel, Co. Cork",
+        "coordinates": {
+            "lat": 52.45001328940656,
+            "lng": -9.143618015319921
+        }
+    },
+    {
+        "title": "Murphy's Gastro Pub Restaurant of Rathmines",
+        "address": "93-95 Rathmines Rd Upper, Rathmines, Dublin, D06 H3E9",
+        "coordinates": {
+            "lat": 53.44391001041968,
+            "lng": -6.2552939658670095
+        }
+    },
+    {
+        "title": "Murphys Bar",
+        "address": "R419, Bracknagh, Co. Offaly",
+        "coordinates": {
+            "lat": 53.34850683670633,
+            "lng": -7.109278059664248
+        }
+    },
+    {
+        "title": "Murphy's Crossroads Inn",
+        "address": "The Crossroads Inn, Lisryan, Granard, Co. Longford, N39 R1X8",
+        "coordinates": {
+            "lat": 53.879670607014226,
+            "lng": -7.487028342736562
+        }
+    },
+    {
+        "title": "Murphy's Pub, Bed & Breakfast",
+        "address": "Murphys Pub, Strand St, Farrannakilla, Dingle, Co. Kerry, V92 FX62",
+        "coordinates": {
+            "lat": 52.27966059545749,
+            "lng": -10.184558689459324
+        }
+    },
+    {
+        "title": "Murphy's Bar",
+        "address": "Castlemaine, Co. Kerry",
+        "coordinates": {
+            "lat": 52.32205605993993,
+            "lng": -9.732780394572801
+        }
+    },
+    {
+        "title": "Murphy's Pub Kilcock Kildare",
+        "address": "Kilcock, Meath Bridge, Co. Kildare",
+        "coordinates": {
+            "lat": 53.5645453189489,
+            "lng": -6.6524935748837395
+        }
+    },
+    {
+        "title": "Murphys bar and shop",
+        "address": "Main St, Ballylynan, Co. Laois",
+        "coordinates": {
+            "lat": 53.08067756286871,
+            "lng": -7.090488199677754
+        }
+    },
+    {
+        "title": "Boss Murphy's Bar",
+        "address": "18 Kerry Ln, Churchtown, Co. Cork",
+        "coordinates": {
+            "lat": 52.45052704397378,
+            "lng": -8.68609357371375
+        }
+    }
+]

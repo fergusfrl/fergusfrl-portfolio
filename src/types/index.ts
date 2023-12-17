@@ -19,3 +19,12 @@ export type WorkFrontmatter = {
 };
 
 export type Breadcrumb = { label: string; href: string };
+
+export type Location = {
+	title: string;
+	address: string;
+	coordinates: {
+		lat: number;
+		lng: number;
+	}
+}
