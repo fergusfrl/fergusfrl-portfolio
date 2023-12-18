@@ -10,7 +10,7 @@ export const load = (async ({ fetch }) => {
 
 	const scratchpad = [{
 		title: 'Murphys Pubs In Ireland',
-		slug: '/murphys-pubs-in-ireland',
+		slug: 'murphys-pubs-in-ireland',
 		image: '/murphys.jpeg'
 	}, {
 		title: 'Conways Game of Life',
