@@ -8,21 +8,21 @@
 
 <svelte:head>
 	<!-- Title -->
-	{#if $page.data.seo.title}
+	{#if $page?.data?.seo?.title}
 		<title>{$page.data.seo.title}</title>
 		<meta property="og:title" content={$page.data.seo.title} />
 		<meta name="twitter:title" content={$page.data.seo.title} />
 	{/if}
 
 	<!-- Description -->
-	{#if $page.data.seo.description}
+	{#if $page?.data?.seo?.description}
 		<meta name="description" content={$page.data.seo.description} />
 		<meta property="og:description" content={$page.data.seo.description} />
 		<meta name="twitter:description" content={$page.data.seo.description} />
 	{/if}
 
 	<!-- image -->
-	{#if $page.data.seo.image}
+	{#if $page?.data?.seo?.image}
 		<meta property="og:image" content={$page.data.seo.image} />
 		<meta name="twitter:image" content={$page.data.seo.image} />
 	{/if}

@@ -18,4 +18,19 @@ export type WorkFrontmatter = {
 	link: string;
 };
 
+export type Scratchpad = {
+	title: string;
+	slug: string;
+	image: string;
+}
+
 export type Breadcrumb = { label: string; href: string };
+
+export type Location = {
+	title: string;
+	address: string;
+	coordinates: {
+		lat: number;
+		lng: number;
+	}
+}

@@ -53,5 +53,19 @@
 				{/each}
 			</ul>
 		</Collection>
+
+		<Collection title="Scratchpad" href="/scratchpad">
+			<ul class="flex flex-wrap justify-between gap-8 lg:grid lg:grid-cols-4">
+				{#each data.scratchpad as scratchpad}
+					<li class="flex-1 first:col-span-2 first:row-span-2 last:hidden last:lg:block">
+						<ArticleCard
+							href={`/scratchpad/${scratchpad.slug}`}
+							label={scratchpad.title}
+							image={scratchpad.image}
+						/>
+					</li>
+				{/each}
+			</ul>
+		</Collection>
 	</div>
 </div>
