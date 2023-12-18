@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	export let isPlaying: boolean = false;
+	export let generation: number;
 
 	const dispatch = createEventDispatcher();
 
@@ -18,7 +19,7 @@
 	}
 </script>
 
-<div class="flex w-full justify-between">
+<div class="mt-4 flex flex-col space-y-4">
 	<div class="flex space-x-4">
 		<button on:click={togglePlay}
 			>{#if isPlaying}
@@ -28,8 +29,9 @@
 			{/if}</button
 		>
 		<button on:click={clearAllCells}>Clear</button>
+		<div>Generation: {generation}</div>
 	</div>
 	<div>
-		<button on:click={randomise}>Randomise</button>
+		<button on:click={randomise}>Randomise Cells</button>
 	</div>
 </div>

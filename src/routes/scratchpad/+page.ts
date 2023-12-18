@@ -6,12 +6,12 @@ export const load = (() => {
             {
                 slug: 'murphys-pubs-in-ireland',
                 title: 'Murphys Pubs in Ireland',
-                image: 'svelte.png'
+                image: 'murphys.jpeg'
             },
             {
                 slug: 'conways-game-of-life',
                 title: 'Conways Game of Life',
-                image: 'svelte.png'
+                image: 'game-of-life.png'
             }
         ],
         seo: {

@@ -1,16 +1,55 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import Cell from '../../../../components/Cell.svelte';
 	import Controls from '../../../../components/Controls.svelte';
 
 	const SPEED_IN_MILLISECONDS = 200;
-	const GRID_SIZE = 35;
+	const GRID_SIZE = 30;
 
 	let cells: number[][] = [];
 	let isPlaying = false;
 	let gameLoop: ReturnType<typeof setInterval>;
+	let isMouseDown = false;
+	let generation = 0;
 
-	clearAllCells();
+	onMount(() => {
+		clearAllCells();
+	});
+
+	onDestroy(() => {
+		clearInterval(gameLoop);
+	});
+
+	function togglePlay() {
+		if (isPlaying) {
+			stopGame();
+			return;
+		}
+
+		startGame();
+	}
+
+	function startGame() {
+		isPlaying = true;
+		gameLoop = setInterval(() => {
+			nextStep();
+		}, SPEED_IN_MILLISECONDS);
+	}
+
+	function stopGame() {
+		isPlaying = false;
+		clearInterval(gameLoop);
+	}
+
+	function clearAllCells() {
+		generation = 0;
+		stopGame();
+		populateCells(0);
+	}
+
+	function randomiseCells() {
+		populateCells(50);
+	}
 
 	function populateCells(percentageAlive: number) {
 		for (let x = 0; x < GRID_SIZE; x++) {
@@ -21,25 +60,20 @@
 		}
 	}
 
-	function clearAllCells() {
-		populateCells(0);
-	}
-
 	function handleCellClick({ detail: { x, y } }: { detail: { x: number; y: number } }) {
 		cells[x][y] = !!cells[x][y] ? 0 : 1;
 	}
 
-	function togglePlay() {
-		if (isPlaying) {
-			isPlaying = false;
-			clearInterval(gameLoop);
-			return;
-		}
+	function activateCell({ detail: { x, y } }: { detail: { x: number; y: number } }) {
+		cells[x][y] = 1;
+	}
 
-		isPlaying = true;
-		gameLoop = setInterval(() => {
-			nextStep();
-		}, SPEED_IN_MILLISECONDS);
+	function setMouseDown() {
+		isMouseDown = true;
+	}
+
+	function setMouseUp() {
+		isMouseDown = false;
 	}
 
 	function nextStep() {
@@ -47,6 +81,8 @@
 		for (let i = 0; i < cells.length; i++) {
 			nextGen[i] = [...cells[i]];
 		}
+
+		generation = generation + 1;
 
 		for (let x = 0; x < GRID_SIZE; x++) {
 			for (let y = 0; y < GRID_SIZE; y++) {
@@ -108,47 +144,51 @@
 
 		return count;
 	}
-
-	function randomise() {
-		populateCells(50);
-	}
-
-	onDestroy(() => {
-		clearInterval(gameLoop);
-	});
 </script>
 
-<ol class="list-decimal">
-	<li>
-		Any live cell with fewer than two live neighbours <strong>dies</strong>, as if by
-		underpopulation.
-	</li>
-	<li>
-		Any live cell with two or three live neighbours <strong>lives</strong> on to the next generation.
-	</li>
-	<li>
-		Any live cell with more than three live neighbours <strong>dies</strong>, as if by
-		overpopulation.
-	</li>
-	<li>
-		Any dead cell with exactly three live neighbours <strong>becomes a live cell</strong>, as if by
-		reproduction.
-	</li>
-</ol>
+<svelte:window on:mousedown={setMouseDown} on:mouseup={setMouseUp} />
 
-<div class=" flex">
-	{#each cells as row, x (row)}
-		<div class="border-black last:border-r">
-			{#each row as cell, y (`${x}, ${y}`)}
-				<Cell {x} {y} active={!!cell} on:click={handleCellClick} />
-			{/each}
-		</div>
-	{/each}
+<div>
+	<ol class="mb-8 list-inside list-decimal">
+		<li>
+			Any live cell with fewer than two live neighbours <strong>dies</strong>, as if by
+			underpopulation.
+		</li>
+		<li>
+			Any live cell with two or three live neighbours <strong>lives</strong> on to the next generation.
+		</li>
+		<li>
+			Any live cell with more than three live neighbours <strong>dies</strong>, as if by
+			overpopulation.
+		</li>
+		<li>
+			Any dead cell with exactly three live neighbours <strong>becomes a live cell</strong>, as if
+			by reproduction.
+		</li>
+	</ol>
+
+	<div class="flex">
+		{#each cells as row, x (row)}
+			<div class="border-black last:border-r">
+				{#each row as cell, y (`${x}, ${y}`)}
+					<Cell
+						{x}
+						{y}
+						active={!!cell}
+						on:click={handleCellClick}
+						on:activateCall={activateCell}
+						{isMouseDown}
+					/>
+				{/each}
+			</div>
+		{/each}
+	</div>
+
+	<Controls
+		{isPlaying}
+		{generation}
+		on:clearCells={clearAllCells}
+		on:togglePlay={togglePlay}
+		on:randomise={randomiseCells}
+	/>
 </div>
-
-<Controls
-	{isPlaying}
-	on:clearCells={clearAllCells}
-	on:togglePlay={togglePlay}
-	on:randomise={randomise}
-/>
