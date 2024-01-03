@@ -10,18 +10,10 @@
 	<section>
 		<h1 class="pb-12 text-[4rem] font-black md:text-[5rem]">Fergus Farrell</h1>
 		<p class="max-w-3xl text-lg leading-8">
-			Freelance web developer — <Link
-				href="mailto:fergusfrl@gmail.com?subject=Work Availability Enquiry&body=Please include as much of the following information as you have available:%0D%0A
-				1. Brief description of your project and its objectives.%0D%0A
-				2. Desired features and functionalities for the website.%0D%0A
-				3. Any specific design preferences or examples of websites you like.%0D%0A
-				4. Expected timeline for the project completion.%0D%0A
-				5. Your budget range for the development.%0D%0A
-				%0D%0A
-				I'll be in touch to organise a face to face.">available for enquiry</Link
-			>! Previously, technical lead at <Link href="https://www.batch.nz/">Batch</Link>, cloud
-			engineer at <Link href="https://www.linkedin.com/company/akeela/">Akeela</Link>, full stack
-			developer at <Link href="https://comrad.co.nz/">Comrad</Link> and <Link
+			Experienced web developer working at <Link href="https://wayleadr.com/">Wayleadr</Link>.
+			Previously, technical lead at <Link href="https://www.batch.nz/">Batch</Link>, cloud engineer
+			at <Link href="https://www.linkedin.com/company/akeela/">Akeela</Link>, full stack developer
+			at <Link href="https://comrad.co.nz/">Comrad</Link> and <Link
 				href="https://orionhealth.com/nz/">Orion Health</Link
 			>, and CS at <Link href="https://www.otago.ac.nz/">Otago</Link>, NZ. Email me at
 			<Link href="mailto:fergusfrl@gmail.com">fergusfrl@gmail.com</Link>.
